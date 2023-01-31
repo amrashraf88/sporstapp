@@ -7,6 +7,7 @@ Feature: verify register functionality
     When user enter first name
     And user enter last name
     And user enter email
+    And user enter phone
     And user enter password
     And user confirm password
     Then user could register successfully

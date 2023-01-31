@@ -38,7 +38,7 @@ String nphone;
     }
     //locate Register button
     public WebElement register(){
-        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/p/a"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/p/a"));
 
     }
 

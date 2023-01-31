@@ -12,8 +12,8 @@ import org.junit.Assert;
 import static StepDefinitions.Hooks.driver;
 
 public class LoginStepDefinition {
-    
-	
+
+	String phone = RegisterStepDefinition.globalVariable;
 	HomePage home = new HomePage(driver);
 	LoginPage login = new LoginPage(driver);
 	
@@ -33,7 +33,7 @@ public class LoginStepDefinition {
 	@When("user enter valid email")
 	public void enterEmail() {
 		
-	 String phone = RegisterStepDefinition.globalVariable;
+
 	    
 		login.userName().sendKeys(phone);
 	}

@@ -19,7 +19,7 @@ public class RegisterStepDefinition {
 
     HomePage home = new HomePage(driver);
     String phone = home.fask_phone();
-    
+
     RegistrationPage register = new RegistrationPage(driver);
 
     @Given("user navigate to registration page")
@@ -55,9 +55,10 @@ public class RegisterStepDefinition {
     @And("user enter email")
     public void enterEmail()
     {
-        register.email().sendKeys("amrhra.f8850@gmail.com");
+        register.email().sendKeys("amrhraf88.50@gmail.com");
     }
     public static String globalVariable;
+
     
     @And("user enter phone")
     public String phone() {
@@ -66,7 +67,7 @@ public class RegisterStepDefinition {
     	register.phone().sendKeys(phone);
     	register.phone().getAttribute(phone);
         globalVariable = phone;
-    	return phone;
+    	return globalVariable;
     	
     }
 
