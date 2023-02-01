@@ -8,6 +8,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import com.github.javafaker.Faker;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import static StepDefinitions.Hooks.driver;
 
 
@@ -55,18 +60,41 @@ public class RegisterStepDefinition {
     @And("user enter email")
     public void enterEmail()
     {
-        register.email().sendKeys("amrhraf88.50@gmail.com");
+        register.email().sendKeys("amrhr585885af8850@gmail.com");
     }
     public static String globalVariable;
-
+    public void clearTextFile(String filePath) {
+        try {
+            FileWriter fw = new FileWriter("/home/amr/Downloads/hotfix_final/fileName.txt");
+            PrintWriter pw = new PrintWriter(fw);
+            pw.print("");
+            pw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     @And("user enter phone")
-    public String phone() {
+    public String phone() throws IOException {
+        try {
+            FileWriter fw = new FileWriter("/home/amr/Downloads/hotfix_final/fileName.txt");
+            PrintWriter pw = new PrintWriter(fw);
+            pw.print("");
+            pw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     	globalVariable = phone;
     	
     	register.phone().sendKeys(phone);
     	register.phone().getAttribute(phone);
         globalVariable = phone;
+
+        File file = new File("fileName.txt");
+        FileWriter fr = new FileWriter(file, true);
+        fr.write("");
+        fr.write(phone);
+        fr.close();
     	return globalVariable;
     	
     }

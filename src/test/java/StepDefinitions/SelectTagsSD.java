@@ -29,7 +29,7 @@ public class SelectTagsSD {
     @And("user choose specific category")
     public void selectCategory()
     {
-        home.selectBookCategory().click();
+        home.selectCategory().click();
     }
 
     @And("user select any tag")

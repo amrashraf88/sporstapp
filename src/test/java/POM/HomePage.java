@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-
 import com.github.javafaker.Faker;
 
 public class HomePage {
@@ -59,7 +58,7 @@ String nphone;
 
     public WebElement searchBox()
     {
-        return driver.findElement(By.xpath("//*[@id=\"small-searchterms\"]"));
+        return driver.findElement(By.xpath("//*[@id=\"searchBar\"]"));
     }
 //
     public WebElement profile()
@@ -84,7 +83,7 @@ String nphone;
         action.click().build().perform();
     }
 
-    public WebElement selectBookCategory()
+    public WebElement selectCategory()
     {
         return driver.findElement(By.xpath("/html/body/div[6]/div[2]/ul[1]/li[5]/a"));
     }

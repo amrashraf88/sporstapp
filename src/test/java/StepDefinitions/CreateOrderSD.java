@@ -28,7 +28,7 @@ public class CreateOrderSD {
     @And("user choose any category")
     public void selectCategory()
     {
-        home.selectBookCategory().click();
+        home.selectCategory().click();
     }
 
     @And("user add any product to cart")

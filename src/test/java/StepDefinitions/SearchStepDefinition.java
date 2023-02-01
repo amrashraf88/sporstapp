@@ -7,7 +7,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 import static StepDefinitions.Hooks.driver;
 
@@ -21,22 +25,35 @@ public class SearchStepDefinition {
     @Given("user login to his account")
     public void loggedUser() {
         home.login().click();
-        login.userName().sendKeys("youssefsamir@gmail.com");
+        StringBuilder data = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                data.append(line).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String dataString = data.toString();
+        System.out.println(dataString);
+
+        login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");
         login.loginButton().click();
     }
 
     @And("user enter name of product at search box")
-    public void searchOnProduct()
-    {
-        home.searchBox().clear();
-        home.searchBox().sendKeys("apple");
+    public void searchOnProduct() throws InterruptedException {
+        Thread.sleep(3000);
+        home.searchBox().click();
+        home.searchBox().sendKeys("white t-shirt");
     }
 
     @And("user click on search")
     public void clickSearchButton()
     {
-        home.searchButton().click();
+        home.searchBox().sendKeys(Keys.ENTER);
     }
 
     @Then("user could see the product displayed")

@@ -8,6 +8,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.yaml.snakeyaml.scanner.Scanner;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 
 import static StepDefinitions.Hooks.driver;
 
@@ -31,11 +37,21 @@ public class LoginStepDefinition {
 	}
 	
 	@When("user enter valid email")
-	public void enterEmail() {
-		
+	public void enterEmail() throws IOException {
+		StringBuilder data = new StringBuilder();
+		try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
+			String line;
+			while ((line = br.readLine()) != null) {
+				data.append(line).append("\n");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-	    
-		login.userName().sendKeys(phone);
+		String dataString = data.toString();
+		System.out.println(dataString);
+
+		login.userName().sendKeys(dataString);
 	}
 
 	@And("user enter valid password")
