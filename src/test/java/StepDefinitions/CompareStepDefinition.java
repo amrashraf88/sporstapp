@@ -30,7 +30,7 @@ public class CompareStepDefinition {
     @When("user select specific category")
     public void selectCategory()
     {
-        home.selectCategory().click();
+        home.selectproduct().click();
     }
 
     @And("user add product to compare list")

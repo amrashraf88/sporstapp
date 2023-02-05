@@ -83,14 +83,14 @@ String nphone;
         action.click().build().perform();
     }
 
-    public WebElement selectCategory()
+    public WebElement selectproduct()
     {
-        return driver.findElement(By.xpath("/html/body/div[6]/div[2]/ul[1]/li[5]/a"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-hometwo/div/div/app-home-sections/div/div/div[2]/div/div/div/swiper/div[3]/div[3]/app-updated-product-card/mat-card/mat-card-content/div[4]/p/a"));
     }
 
     public WebElement cartPageButton()
     {
-        return driver.findElement(By.xpath("//*[@id=\"topcartlink\"]/a"));
+        return driver.findElement(By.xpath("//*[@id=\"headerCart\"]/span[1]/mat-icon"));
     }
 
     public void selectEuroCurrency()

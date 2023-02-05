@@ -47,7 +47,7 @@ public class WishlistSD {
     @When("user select any category")
     public void selectCategory()
     {
-        home.selectCategory().click();
+        home.selectproduct().click();
     }
 
     @And("user add product to wishlist")

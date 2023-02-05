@@ -30,7 +30,7 @@ public class CartStepDefinition {
     @When("user choose category")
     public void selectCategory()
     {
-        home.selectCategory().click();
+        home.selectproduct().click();
     }
 
     @And("user add product to cart")

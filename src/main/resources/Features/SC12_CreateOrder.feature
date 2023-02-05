@@ -6,8 +6,9 @@ Feature: Create successful order
     And user choose any category
     And user add any product to cart
     And user open cart page
-    And user agree terms and conditions
     And user click on checkout
+   And user agree terms and conditions
+
     And user edit billing address
     And user choose shipping method
     And user choose payment method
