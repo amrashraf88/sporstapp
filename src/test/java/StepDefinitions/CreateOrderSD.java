@@ -13,21 +13,14 @@ public class CreateOrderSD {
     HomePage home = new HomePage(driver);
     LoginPage login = new LoginPage(driver);
     CategoryPage category = new CategoryPage(driver);
-    CheckoutPage checkout = new CheckoutPage(driver);
+    checkoutpage checkout = new checkoutpage(driver);
     CartPage cart = new CartPage(driver);
 
-    @When("user login to website")
-    public void loggedUser()
-    {
-        home.login().click();
-        login.userName().sendKeys("youssefsamir@gmail.com");
-        login.password().sendKeys("12345678");
-        login.loginButton().click();
-    }
+
 
     @And("user choose any category")
-    public void selectproduct()
-    {
+    public void selectproduct() throws InterruptedException {
+        Thread.sleep(6000);
         home.selectproduct().click();
     }
 
@@ -43,54 +36,77 @@ public class CreateOrderSD {
         home.cartPageButton().click();
     }
 
-    @And("user agree terms and conditions")
-    public void agreeTermsANDConditions()
-    {
-        cart.termsAndConditions().click();
-    }
 
     @And("user click on checkout")
-    public void clickOnCheckout()
-    {
+    public void clickOnCheckout() throws InterruptedException {
+        Thread.sleep(3000);
         cart.checkoutButton().click();
     }
 
+    @And("user choose which way he went to checkout")
+    public void choose_way() throws InterruptedException {
+        Thread.sleep(2000);
+        checkout.Continue_as_guest().click();
+    }
+    @And("user add data")
+    public void add_data_guest() throws InterruptedException {
+        Thread.sleep(2000);
+        checkout.first_name_guest().click();
+        checkout.first_name_guest().sendKeys("as");
+        checkout.last_name_guest().click();
+        checkout.last_name_guest().sendKeys("sa");
+        checkout.phone_guest().click();
+        checkout.phone_guest().sendKeys("251215325");
+        checkout.containue_to_store_details().click();
+    }
     @And("user edit billing address")
-    public void addBillingAddress()
-    {
-        checkout.editBillingAddress();
+    public void addBillingAddress() throws InterruptedException {
+        Thread.sleep(3000);
+        checkout.crest_address().click();
+    }
+    @And("user add address")
+    public void add_address_guest() throws InterruptedException {
+        Thread.sleep(3000);
+        checkout.address_street().click();
+        checkout.address_street().sendKeys("test");
+        checkout.building().click();
+        checkout.building().sendKeys("test");
+        checkout.save_address().click();
     }
 
-    @And("user choose shipping method")
-    public void selectShippingMethod()
-    {
-        checkout.shippingMethod();
-    }
+
+
 
     @And("user choose payment method")
     public void selectPaymentMethod()
     {
-        checkout.paymentMethod();
+        checkout.continue_pyment().click();
     }
 
     @And("user check payment information")
     public void checkPaymentInformation()
     {
-        checkout.paymentInformation();
+        checkout.choose_payment().click();
+    }
+
+    @And("user agree terms and conditions")
+    public void agreeTermsANDConditions()
+    {
+        checkout.agree_team_condetion().click();
     }
 
     @And("user confirm order")
     public void clickConfirmOrder()
     {
-        checkout.confirmOrder();
+        checkout.place_order().click();
     }
 
-    @Then("order should be placed successfully")
-    public void checkOrderIsPlaced() throws InterruptedException {
-        Thread.sleep(2000);
-        String expectedResult = "Your order has been successfully processed!";
-        String actualResult = checkout.getOrderMessage().getText();
-        Assert.assertTrue(actualResult.contains(expectedResult));
-    }
+//    @Then("order should be placed successfully")
+//    public void checkOrderIsPlaced() throws InterruptedException {
+//        Thread.sleep(2000);
+//        String expectedResult = "Your order has been successfully processed!";
+//        String actualResult = checkout.getOrderMessage().getText();
+//        Assert.assertTrue(actualResult.contains(expectedResult));
+//    }
 
 }

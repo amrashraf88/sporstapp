@@ -25,6 +25,6 @@ public class CartPage {
 
     public WebElement checkoutButton()
     {
-        return driver.findElement(By.xpath("//*[@id=\"checkout\"]"));
+        return driver.findElement(By.xpath("//*[@id=\"goToCheckout\"]"));
     }
 }
