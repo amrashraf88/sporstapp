@@ -5,6 +5,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static StepDefinitions.Hooks.driver;
 
@@ -15,18 +19,19 @@ public class CreateOrderSD {
     CategoryPage category = new CategoryPage(driver);
     checkoutpage checkout = new checkoutpage(driver);
     CartPage cart = new CartPage(driver);
-
+  //  WebDriverWait wait = new WebDriverWait(driver, 30); // Wait up to 30 seconds
 
 
     @And("user choose any category")
     public void selectproduct() throws InterruptedException {
-        Thread.sleep(6000);
-        home.selectproduct().click();
+        Thread.sleep(2000);
+
+        driver.navigate().to("https://hotfix.el-dokan.com/en/products/Mark-4/90628?variant=90629");
     }
 
     @And("user add any product to cart")
-    public void addToCart()
-    {
+    public void addToCart() throws InterruptedException {
+        Thread.sleep(6000);
         category.addToCartButton().click();
     }
 

@@ -32,7 +32,7 @@ public class CategoryPage {
 
     public WebElement addToCartButton()
     {
-        return driver.findElement(By.xpath("//*[@id=\"addToCart\"]/span[1]/span"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-detailpage/div/div/div/embryo-shopdetails/div/div[2]/div/div[2]/div/div/div/div[2]/div/ul/li[4]/div/div[2]/div[3]/app-control-add-to-cart/span/span/button"));
     }
 
     public WebElement addToWishlistButton()

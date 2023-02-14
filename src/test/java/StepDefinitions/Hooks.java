@@ -20,7 +20,7 @@ public class Hooks {
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.navigate().to("https://hotfix.el-dokan.com/en");
         Thread.sleep(9000);
-        System.out.println("dddddd");
+
     }
     
 
