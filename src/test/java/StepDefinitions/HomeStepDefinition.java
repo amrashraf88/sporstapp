@@ -8,6 +8,10 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 import static StepDefinitions.Hooks.driver;
 
 
@@ -19,16 +23,30 @@ public class HomeStepDefinition {
 
 
     @Given("user logged in to select category")
-    public void loggedUser(){
+    public void loggedUser() throws InterruptedException {
         home.login().click();
-        login.userName().sendKeys("youssefsamir@gmail.com");
+        Thread.sleep(2000);
+        StringBuilder data = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                data.append(line).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String dataString = data.toString();
+        System.out.println(dataString);
+
+        login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");
         login.loginButton().click();
     }
 
     @And("user hover on category and select subcategory")
-    public void selectCategory()
-    {
+    public void selectCategory() throws InterruptedException {
+        Thread.sleep(2000);
         home.hoverOnCategory();
     }
 

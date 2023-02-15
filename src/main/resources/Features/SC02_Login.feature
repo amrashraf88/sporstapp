@@ -7,4 +7,5 @@ Feature: Verify login Functionality
     When user enter valid email
     And user enter valid password
     And user click on login
+    And  user click on profile
     Then user could login successfully and redirected to home page

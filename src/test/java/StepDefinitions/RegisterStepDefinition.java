@@ -29,15 +29,15 @@ public class RegisterStepDefinition {
 
     @Given("user navigate to registration page")
     public void openRegistrationPag() {
-    	//home.login().click();
-        home.register().click();
+    	home.login().click();
+
     	try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+        home.register().click();
     }
 
 
@@ -60,7 +60,7 @@ public class RegisterStepDefinition {
     @And("user enter email")
     public void enterEmail()
     {
-        register.email().sendKeys("amrhr585885af8850@gmail.com");
+        register.email().sendKeys("amrhr585885.50@gmail.com");
     }
     public static String globalVariable;
     public void clearTextFile(String filePath) {

@@ -10,6 +10,10 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 import static StepDefinitions.Hooks.driver;
 
 
@@ -23,9 +27,20 @@ public class CategoryStepDefinition {
     @Given("user is logged in to filter")
     public void loggedUser(){
         home.login().click();
-        login.userName().sendKeys("youssefsamir@gmail.com");
-        login.password().sendKeys("12345678");
-        login.loginButton().click();
+        StringBuilder data = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                data.append(line).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String dataString = data.toString();
+        System.out.println(dataString);
+
+        login.userName().sendKeys(dataString);
     }
 
     @When("user select category")

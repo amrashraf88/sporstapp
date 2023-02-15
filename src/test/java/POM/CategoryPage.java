@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
 public class CategoryPage {
 
     WebDriver driver = null;
@@ -58,5 +56,8 @@ public class CategoryPage {
     public WebElement awesomeTag()
     {
         return driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div[2]/div[4]/div[2]/div[1]/ul/li[2]/a"));
+    }
+
+    public static class WalletPage {
     }
 }

@@ -15,3 +15,4 @@ Feature: Create successful order
     And user check payment information
     And user agree terms and conditions
     And user confirm order
+Then order should be placed successfully

@@ -23,8 +23,9 @@ public class SearchStepDefinition {
     SearchPage search = new SearchPage(driver);
 
     @Given("user login to his account")
-    public void loggedUser() {
+    public void loggedUser() throws InterruptedException {
         home.login().click();
+        Thread.sleep(3000);
         StringBuilder data = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
             String line;
@@ -47,7 +48,7 @@ public class SearchStepDefinition {
     public void searchOnProduct() throws InterruptedException {
         Thread.sleep(3000);
         home.searchBox().click();
-        home.searchBox().sendKeys("white t-shirt");
+        home.searchBox().sendKeys("Arsenal T-shirt");
     }
 
     @And("user click on search")
