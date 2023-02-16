@@ -60,7 +60,7 @@ public class RegisterStepDefinition {
     @And("user enter email")
     public void enterEmail()
     {
-        register.email().sendKeys("amrhr585885.50@gmail.com");
+        register.email().sendKeys("amrhr58.5885.50@gmail.com");
     }
     public static String globalVariable;
     public void clearTextFile(String filePath) {

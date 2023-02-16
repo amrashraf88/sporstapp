@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="12" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="181.632">
+    <testcase classname="verify register functionality" name="User could register with valid data" time="14.918">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [5c48415334942f3b67213936ddb8a163, clickElement {id=49e84bbc-8e1c-47f2-be77-936ff49fac63}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.vzoG3S}, goog:chromeOptions: {debuggerAddress: localhost:37993}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37993/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (5c48415334942f3b67213936ddb8a163)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: 5c48415334942f3b67213936ddb8a163" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user navigate to registration page....................................failed
+When user enter first name..................................................skipped
+And user enter last name....................................................skipped
+And user enter email........................................................skipped
+And user enter phone........................................................skipped
+And user enter password.....................................................skipped
+And user confirm password...................................................skipped
+Then user could register successfully.......................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c48415334942f3b67213936ddb8a163, clickElement {id=49e84bbc-8e1c-47f2-be77-936ff49fac63}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.vzoG3S}, goog:chromeOptions: {debuggerAddress: localhost:37993}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37993/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (5c48415334942f3b67213936ddb8a163)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: 5c48415334942f3b67213936ddb8a163
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.RegisterStepDefinition.openRegistrationPag(RegisterStepDefinition.java:32)
+	at ✽.user navigate to registration page(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC01_Register.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Verify login Functionality" name="User could log in with valid email and password" time="17.187">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [70edd5f8615795670dd2aab408f74a21, clickElement {id=39f4eb90-7b99-4d1b-ad18-d3aaba87c77a}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.DyZ59w}, goog:chromeOptions: {debuggerAddress: localhost:37567}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37567/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (70edd5f8615795670dd2aab408f74a21)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: 70edd5f8615795670dd2aab408f74a21" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user to login page....................................................failed
+And user accept cookies.....................................................skipped
+When user enter valid email.................................................skipped
+And user enter valid password...............................................skipped
+And user click on login.....................................................skipped
+And user click on profile...................................................skipped
+Then user could login successfully and redirected to home page..............skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [70edd5f8615795670dd2aab408f74a21, clickElement {id=39f4eb90-7b99-4d1b-ad18-d3aaba87c77a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.DyZ59w}, goog:chromeOptions: {debuggerAddress: localhost:37567}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37567/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (70edd5f8615795670dd2aab408f74a21)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: 70edd5f8615795670dd2aab408f74a21
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.LoginStepDefinition.openLoginPage(LoginStepDefinition.java:30)
+	at ✽.user to login page(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC02_Login.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="verify reset password functionality" name="User could reset his/her password successfully" time="14.64">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7265c4eac0da9ce2f2505d5144a7ef9b, clickElement {id=25211a34-9c96-403a-b3b8-09f807fb8b48}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.Yg7heS}, goog:chromeOptions: {debuggerAddress: localhost:44699}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44699/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (7265c4eac0da9ce2f2505d5144a7ef9b)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: 7265c4eac0da9ce2f2505d5144a7ef9b" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user opened login page................................................failed
+And user click on reset password............................................skipped
+And user enter his email....................................................skipped
+And user click recover......................................................skipped
+Then user should receive a link to reset password...........................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7265c4eac0da9ce2f2505d5144a7ef9b, clickElement {id=25211a34-9c96-403a-b3b8-09f807fb8b48}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.Yg7heS}, goog:chromeOptions: {debuggerAddress: localhost:44699}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44699/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (7265c4eac0da9ce2f2505d5144a7ef9b)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: 7265c4eac0da9ce2f2505d5144a7ef9b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.ForgotPasswordSD.openLoginPage(ForgotPasswordSD.java:22)
+	at ✽.user opened login page(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC03_ResetPass.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="verify search function" name="Logged User could search for any product" time="14.872">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [ea0b11b1a3228b19ed3f55dff3a3c174, clickElement {id=c8b99026-5663-45f9-a489-4f0b09ada51b}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.04gm1F}, goog:chromeOptions: {debuggerAddress: localhost:42355}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:42355/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (ea0b11b1a3228b19ed3f55dff3a3c174)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: ea0b11b1a3228b19ed3f55dff3a3c174" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user login to his account.............................................failed
+And user enter name of product at search box................................skipped
+And user click on search....................................................skipped
+Then user could see the product displayed...................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ea0b11b1a3228b19ed3f55dff3a3c174, clickElement {id=c8b99026-5663-45f9-a489-4f0b09ada51b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.04gm1F}, goog:chromeOptions: {debuggerAddress: localhost:42355}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:42355/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (ea0b11b1a3228b19ed3f55dff3a3c174)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: ea0b11b1a3228b19ed3f55dff3a3c174
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.SearchStepDefinition.loggedUser(SearchStepDefinition.java:27)
+	at ✽.user login to his account(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC04_Search.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Logged User could switch between currencies US-Euro" name="user can switch between currencies" time="13.476">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user logged in to select currency.....................................undefined
+And user select EURO currency...............................................skipped
+Then euro sign should be displayed at website...............................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="verify category functionality" name="Logged user could select different Categories" time="14.294">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [3df6d9b2054df75f1e3b18f1640584b8, clickElement {id=0c17b9ec-ff50-4acf-b076-d831776b4b6b}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.M0NNHD}, goog:chromeOptions: {debuggerAddress: localhost:33433}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33433/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (3df6d9b2054df75f1e3b18f1640584b8)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: 3df6d9b2054df75f1e3b18f1640584b8" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user logged in to select category.....................................failed
+And user hover on category and select subcategory...........................skipped
+Then the selected category should be displayed..............................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3df6d9b2054df75f1e3b18f1640584b8, clickElement {id=0c17b9ec-ff50-4acf-b076-d831776b4b6b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.M0NNHD}, goog:chromeOptions: {debuggerAddress: localhost:33433}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33433/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (3df6d9b2054df75f1e3b18f1640584b8)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: 3df6d9b2054df75f1e3b18f1640584b8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.HomeStepDefinition.loggedUser(HomeStepDefinition.java:27)
+	at ✽.user logged in to select category(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC06_SelectCategory.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="verify filtration functionality" name="Logged user could filter with color" time="14.268">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [df376758895c88d5939beac6138779a5, clickElement {id=0d342e4a-7982-481e-83ef-db00ae8eef70}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.KC93cr}, goog:chromeOptions: {debuggerAddress: localhost:33341}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33341/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (df376758895c88d5939beac6138779a5)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: df376758895c88d5939beac6138779a5" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user is logged in to filter...........................................failed
+When user select category...................................................skipped
+And user filter by color....................................................skipped
+Then products with this attribute should be displayed.......................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [df376758895c88d5939beac6138779a5, clickElement {id=0d342e4a-7982-481e-83ef-db00ae8eef70}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.KC93cr}, goog:chromeOptions: {debuggerAddress: localhost:33341}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33341/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (df376758895c88d5939beac6138779a5)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: df376758895c88d5939beac6138779a5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.CategoryStepDefinition.loggedUser(CategoryStepDefinition.java:29)
+	at ✽.user is logged in to filter(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC07_Filteration.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Logged user could select different tags" name="user can select different tags" time="14.173">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [887e4b9fbfe1cda6b076e4df445504fb, clickElement {id=46c9d5df-b5fc-4a5c-8308-9ac059584472}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.VFEJvz}, goog:chromeOptions: {debuggerAddress: localhost:40609}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40609/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (887e4b9fbfe1cda6b076e4df445504fb)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: 887e4b9fbfe1cda6b076e4df445504fb" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user login............................................................failed
+And user choose specific category...........................................skipped
+And user select any tag.....................................................skipped
+Then this tag page should be opened successfully............................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [887e4b9fbfe1cda6b076e4df445504fb, clickElement {id=46c9d5df-b5fc-4a5c-8308-9ac059584472}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.VFEJvz}, goog:chromeOptions: {debuggerAddress: localhost:40609}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40609/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (887e4b9fbfe1cda6b076e4df445504fb)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: 887e4b9fbfe1cda6b076e4df445504fb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.SelectTagsSD.loginToWebsite(SelectTagsSD.java:27)
+	at ✽.user login(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC08_SelectTags.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="verify cart functionality" name="Logged user could add different products to Shopping cart" time="12.78">
+        <failure message="timeout: Timed out receiving message from renderer: 1.365&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [ee2f69035e76b6967777d1b7a3051975, get {url=https://hotfix.el-dokan.com/en}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.Gu0npw}, goog:chromeOptions: {debuggerAddress: localhost:39215}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39215/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: ee2f69035e76b6967777d1b7a3051975" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user logged in to add product to cart.................................skipped
+When user choose category...................................................skipped
+And user add product to cart................................................skipped
+Then product should be added successfully to cart...........................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 1.365
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ee2f69035e76b6967777d1b7a3051975, get {url=https://hotfix.el-dokan.com/en}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.Gu0npw}, goog:chromeOptions: {debuggerAddress: localhost:39215}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39215/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ee2f69035e76b6967777d1b7a3051975
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:296)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:975)
+	at StepDefinitions.Hooks.openBrowser(Hooks.java:21)
+]]></failure>
+    </testcase>
+    <testcase classname="verify wishlist functionality" name="Logged user could add different products to Wishlist" time="14.299">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [ae14b7e0dbe85c394d115a81cdfdb036, clickElement {id=e90adabd-8810-4b9f-bfd2-60d4adee002b}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.aZdpVf}, goog:chromeOptions: {debuggerAddress: localhost:40599}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40599/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (ae14b7e0dbe85c394d115a81cdfdb036)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: ae14b7e0dbe85c394d115a81cdfdb036" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user logged in to add product to wishlist.............................failed
+When user select any category...............................................skipped
+And user add product to wishlist............................................skipped
+Then product should add to wishlist successfully............................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ae14b7e0dbe85c394d115a81cdfdb036, clickElement {id=e90adabd-8810-4b9f-bfd2-60d4adee002b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.aZdpVf}, goog:chromeOptions: {debuggerAddress: localhost:40599}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40599/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (ae14b7e0dbe85c394d115a81cdfdb036)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: ae14b7e0dbe85c394d115a81cdfdb036
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.WishlistSD.loggedUser(WishlistSD.java:28)
+	at ✽.user logged in to add product to wishlist(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC10_AddToWishlist.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="verify compare list functionality" name="Logged user could add different products to compare list" time="14.244">
+        <failure message="element click intercepted: Element &lt;mat-icon _ngcontent-embryo-seo-pre-c251=&quot;&quot; role=&quot;img&quot; class=&quot;mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color&quot; style=&quot;outline: none; right: 2px; top: -1px;&quot; aria-hidden=&quot;true&quot; data-mat-icon-type=&quot;font&quot;&gt;...&lt;/mat-icon&gt; is not clickable at point (1664, 115). Other element would receive the click: &lt;div _ngcontent-embryo-seo-pre-c259=&quot;&quot; class=&quot;multi-env-both-area ng-star-inserted&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=110.0.5481.77)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [e523648ac9c713cf613a0a600c0a4e44, clickElement {id=c7482896-5805-4cba-b4d1-5df0958be6be}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.iKKvY2}, goog:chromeOptions: {debuggerAddress: localhost:44287}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44287/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (e523648ac9c713cf613a0a600c0a4e44)] -&gt; xpath: //*[@id=&quot;signIn&quot;]/button/span[1]/mat-icon]&#10;Session ID: e523648ac9c713cf613a0a600c0a4e44" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user logged in to add product to compare list.........................failed
+When user select specific category..........................................skipped
+And user add product to compare list........................................skipped
+Then the product should added to compare list successfully..................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <mat-icon _ngcontent-embryo-seo-pre-c251="" role="img" class="mat-icon material-icons notranslate position-icon-1 defulat-icons-color icons-fill-color mat-icon-no-color" style="outline: none; right: 2px; top: -1px;" aria-hidden="true" data-mat-icon-type="font">...</mat-icon> is not clickable at point (1664, 115). Other element would receive the click: <div _ngcontent-embryo-seo-pre-c259="" class="multi-env-both-area ng-star-inserted">...</div>
+  (Session info: chrome=110.0.5481.77)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e523648ac9c713cf613a0a600c0a4e44, clickElement {id=c7482896-5805-4cba-b4d1-5df0958be6be}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.iKKvY2}, goog:chromeOptions: {debuggerAddress: localhost:44287}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44287/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (e523648ac9c713cf613a0a600c0a4e44)] -> xpath: //*[@id="signIn"]/button/span[1]/mat-icon]
+Session ID: e523648ac9c713cf613a0a600c0a4e44
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.CompareStepDefinition.loggedUser(CompareStepDefinition.java:24)
+	at ✽.user logged in to add product to compare list(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC11_AddToCompare.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Create successful order" name="user can create Order" time="22.168">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-detailpage/div/div/div/embryo-shopdetails/div/div[2]/div/div[2]/div/div/div/div[2]/div/ul/li[4]/div/div[2]/div[3]/app-control-add-to-cart/span/span/button&quot;}&#10;  (Session info: chrome=110.0.5481.77)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [f14aa026bf3d68c1eb2f8d4733aa8f39, findElement {using=xpath, value=/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-detailpage/div/div/div/embryo-shopdetails/div/div[2]/div/div[2]/div/div/div/div[2]/div/ul/li[4]/div/div[2]/div[3]/app-control-add-to-cart/span/span/button}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.NiP9Vh}, goog:chromeOptions: {debuggerAddress: localhost:41003}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41003/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: f14aa026bf3d68c1eb2f8d4733aa8f39" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user choose any category...............................................passed
+And user add any product to cart............................................failed
+And user open cart page.....................................................skipped
+And user click on checkout..................................................skipped
+And user choose which way he went to checkout...............................skipped
+And user add data...........................................................skipped
+And user edit billing address...............................................skipped
+And user add address........................................................skipped
+And user choose payment method..............................................skipped
+And user check payment information..........................................skipped
+And user agree terms and conditions.........................................skipped
+And user confirm order......................................................skipped
+Then order should be placed successfully....................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-detailpage/div/div/div/embryo-shopdetails/div/div[2]/div/div[2]/div/div/div/div[2]/div/ul/li[4]/div/div[2]/div[3]/app-control-add-to-cart/span/span/button"}
+  (Session info: chrome=110.0.5481.77)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f14aa026bf3d68c1eb2f8d4733aa8f39, findElement {using=xpath, value=/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-detailpage/div/div/div/embryo-shopdetails/div/div[2]/div/div[2]/div/div/div/div[2]/div/ul/li[4]/div/div[2]/div[3]/app-control-add-to-cart/span/span/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.NiP9Vh}, goog:chromeOptions: {debuggerAddress: localhost:41003}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41003/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f14aa026bf3d68c1eb2f8d4733aa8f39
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at POM.CategoryPage.addToCartButton(CategoryPage.java:33)
+	at StepDefinitions.CreateOrderSD.addToCart(CreateOrderSD.java:39)
+	at ✽.user add any product to cart(file:///home/amr/Downloads/hotfix_final/src/main/resources/Features/SC12_CreateOrder.feature:7)
+]]></failure>
+    </testcase>
+</testsuite>
