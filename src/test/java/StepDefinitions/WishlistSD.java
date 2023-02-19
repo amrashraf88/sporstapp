@@ -39,8 +39,8 @@ public class WishlistSD {
 
         String dataString = data.toString();
         System.out.println(dataString);
-        login.userName().click();
-        login.userName().sendKeys(dataString);
+       // login.userName().click();
+      //  login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");
         login.loginButton().click();
     }

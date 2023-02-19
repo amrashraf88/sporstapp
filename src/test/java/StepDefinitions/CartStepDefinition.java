@@ -24,8 +24,9 @@ public class CartStepDefinition {
 
 
     @Given("user logged in to add product to cart")
-    public void loggedUser(){
+    public void loggedUser() throws InterruptedException {
         home.login().click();
+        Thread.sleep(2000);
         StringBuilder data = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
             String line;
@@ -39,7 +40,7 @@ public class CartStepDefinition {
         String dataString = data.toString();
         System.out.println(dataString);
 
-        login.userName().sendKeys(dataString);
+      //  login.userName().sendKeys(dataString);
     }
 
     @When("user choose category")

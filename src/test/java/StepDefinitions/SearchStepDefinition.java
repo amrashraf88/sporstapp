@@ -24,6 +24,7 @@ public class SearchStepDefinition {
 
     @Given("user login to his account")
     public void loggedUser() throws InterruptedException {
+
         home.login().click();
         Thread.sleep(3000);
         StringBuilder data = new StringBuilder();
@@ -39,7 +40,7 @@ public class SearchStepDefinition {
         String dataString = data.toString();
         System.out.println(dataString);
 
-        login.userName().sendKeys(dataString);
+       // login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");
         login.loginButton().click();
     }

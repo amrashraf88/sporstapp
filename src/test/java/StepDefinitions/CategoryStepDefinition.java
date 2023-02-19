@@ -25,22 +25,10 @@ public class CategoryStepDefinition {
 
 
     @Given("user is logged in to filter")
-    public void loggedUser(){
+    public void loggedUser() throws InterruptedException {
         home.login().click();
-        StringBuilder data = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                data.append(line).append("\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String dataString = data.toString();
-        System.out.println(dataString);
-
-        login.userName().sendKeys(dataString);
+        Thread.sleep(3000);
+        login.userName();
     }
 
     @When("user select category")

@@ -38,7 +38,7 @@ public class SelectTagsSD {
         String dataString = data.toString();
         System.out.println(dataString);
 
-        login.userName().sendKeys(dataString);
+      //  login.userName().sendKeys(dataString);
     }
 
     @And("user choose specific category")

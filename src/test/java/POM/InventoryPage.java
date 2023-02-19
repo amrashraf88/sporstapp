@@ -1,8 +1,12 @@
 package POM;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+
 
 public class InventoryPage {
     WebDriver driver = null;
@@ -39,6 +43,9 @@ public WebElement invventory_icon(){
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[4]/div[1]/span[2]/app-source-icons/div/button/span[1]/mat-icon"));
 }
 
+public WebElement inventory_page(){
+        return driver.findElement(By.xpath("/html/body/app-root/div[2]/div"));
+}
 
 
 }

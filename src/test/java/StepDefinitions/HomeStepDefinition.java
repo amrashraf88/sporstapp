@@ -39,7 +39,7 @@ public class HomeStepDefinition {
         String dataString = data.toString();
         System.out.println(dataString);
 
-        login.userName().sendKeys(dataString);
+      //  login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");
         login.loginButton().click();
     }

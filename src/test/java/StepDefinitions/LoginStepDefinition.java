@@ -8,11 +8,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.yaml.snakeyaml.scanner.Scanner;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.List;
 
 import static StepDefinitions.Hooks.driver;
@@ -22,11 +29,12 @@ public class LoginStepDefinition {
 	String phone = RegisterStepDefinition.globalVariable;
 	HomePage home = new HomePage(driver);
 	LoginPage login = new LoginPage(driver);
-	
+
 	String nphone;
 	@Given("user to login page")
 	public void openLoginPage() throws InterruptedException {
-		Thread.sleep(3000);
+
+		Thread.sleep(16000);
 		home.login().click();
 		
 	}
@@ -37,21 +45,51 @@ public class LoginStepDefinition {
 	}
 	
 	@When("user enter valid email")
-	public void enterEmail() throws IOException {
-		StringBuilder data = new StringBuilder();
-		try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
-			String line;
-			while ((line = br.readLine()) != null) {
-				data.append(line).append("\n");
+	public void enterEmail() throws IOException, InterruptedException {
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(1000));
+//		try {
+//			// Wait for up to 10 seconds for the element to be present and visible
+//			WebElement element = new WebDriverWait(driver, Duration.ofMillis(10))
+//					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/input")));
+//
+//			// If the element is present and visible, check if it's enabled and enter some text
+//			if (element.isEnabled()) {
+//				login.userName();
+//				//  inventory.storeSave().click();
+//			} else {
+//				System.out.println("Element is not enabled");
+//			}
+//		} catch (NoSuchElementException | TimeoutException e) {
+//			System.out.println("Element not found or timed out");
+//		}
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10));
+		WebElement element = null;
+		boolean elementFound = false;
+
+		while(!elementFound) {
+			try {
+				element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/input")));
+				elementFound = true;
+			} catch (TimeoutException e) {
+				System.out.println("Element not found, retrying...");
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
-
-		String dataString = data.toString();
-		System.out.println(dataString);
-
-		login.userName().sendKeys(dataString);
+        login.userName();
+//		StringBuilder data = new StringBuilder();
+//		try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
+//			String line;s
+//			while ((line = br.readLine()) != null) {
+//				data.append(line).append("\n");
+//			}
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//
+//		String dataString = data.toString();
+//		System.out.println(dataString);
+//
+//		login.userName().sendKeys(dataString);
 	}
 
 	@And("user enter valid password")
