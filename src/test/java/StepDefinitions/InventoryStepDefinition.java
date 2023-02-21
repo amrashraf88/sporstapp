@@ -5,6 +5,9 @@ import POM.InventoryPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import static StepDefinitions.Hooks.driver;
 
@@ -14,7 +17,10 @@ public class InventoryStepDefinition {
 
 
     @Given("user select pickup")
-    public void Select_store(){
+    public void Select_store() throws InterruptedException {
+        Thread.sleep(3000);
+        inventory.invventory_icon().click();
+        Thread.sleep(1000);
         inventory.SelectStore().click();
     }
     @And("user select store")
@@ -36,12 +42,19 @@ public class InventoryStepDefinition {
         inventory.MapInventory().click();
     }
     @And("user choose current locaion")
-    public void current_location(){
+    public void current_location() throws InterruptedException {
         inventory.currentLocation().click();
+        Thread.sleep(3000);
+        Actions actions = new Actions(driver);
+
+         WebElement element = driver.findElement(By.xpath("/html/body/app-root/div[2]/app-multi-invintory-area/div/div/div[2]/agm-map/div[2]/div/img"));
+        actions.moveToElement(element,50,100).perform();
+        actions.moveToElement(element).clickAndHold().moveByOffset(300, 0).release().perform();
     }
     @Then("user save his current location")
     public void save_map() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(6000);
+
         inventory.mapSave().click();
     }
 }

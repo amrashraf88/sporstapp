@@ -25,21 +25,11 @@ public class SearchStepDefinition {
     @Given("user login to his account")
     public void loggedUser() throws InterruptedException {
 
+
+        Thread.sleep(3000);
         home.login().click();
         Thread.sleep(3000);
-        StringBuilder data = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                data.append(line).append("\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String dataString = data.toString();
-        System.out.println(dataString);
-
+        login.userName();
        // login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");
         login.loginButton().click();

@@ -45,6 +45,7 @@ public WebElement invventory_icon(){
 
 public WebElement inventory_page(){
         return driver.findElement(By.xpath("/html/body/app-root/div[2]/div"));
+
 }
 
 

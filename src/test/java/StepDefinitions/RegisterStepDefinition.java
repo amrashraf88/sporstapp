@@ -102,7 +102,8 @@ public class RegisterStepDefinition {
     @And("user enter email")
     public void enterEmail()
     {
-        register.email().sendKeys("amrhr58.5885.50@gmail.com");
+        String email = home.fask_email();
+        register.email().sendKeys(email);
     }
     public static String globalVariable;
     public void clearTextFile(String filePath) {

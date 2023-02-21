@@ -27,9 +27,14 @@ String nphone;
 //fake name generation 
     
     public String fask_name() {
-    	String name = faker.name().firstName(); 
-    	
-    	return name ;
+    	String name = faker.name().firstName();
+
+        return name ;
+    }
+    public String fask_email() {
+        String email = faker.internet().emailAddress();
+
+        return email ;
     }
     
     // fake phone genartion
