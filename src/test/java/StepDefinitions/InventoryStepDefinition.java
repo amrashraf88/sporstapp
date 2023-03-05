@@ -47,7 +47,7 @@ public class InventoryStepDefinition {
         Thread.sleep(3000);
         Actions actions = new Actions(driver);
 
-         WebElement element = driver.findElement(By.xpath("/html/body/app-root/div[2]/app-multi-invintory-area/div/div/div[2]/agm-map/div[2]/div/img"));
+         WebElement element = driver.findElement(By.xpath("/html/body/app-root/div[2]/app-multi-invintory-area/div/div/div[2]/agm-map/div[1]/div/div/div[2]"));
         actions.moveToElement(element,50,100).perform();
         actions.moveToElement(element).clickAndHold().moveByOffset(300, 0).release().perform();
     }

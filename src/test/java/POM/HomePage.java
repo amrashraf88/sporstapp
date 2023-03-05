@@ -11,6 +11,7 @@ import java.time.Duration;
 
 
 
+
 public class HomePage {
 	String globalVariable = null;
     WebDriver driver = null;
@@ -79,32 +80,39 @@ String nphone;
         return driver.findElement(By.xpath("//*[@id=\"small-search-box-form\"]/button"));
     }
 
-    public void hoverOnCategory()
-    {
+    public void hoverOnCategory() throws InterruptedException {
         WebElement mainMenu;
         WebElement subMenu;
         //driver.navigate().to("https://demo.nopcommerce.com/");
         //Thread.sleep(2000);
-        mainMenu = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[3]/div/div/embryo-menu/div/nav/ul/li[2]/div[1]/a/span"));
+        mainMenu = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[3]/div/div/embryo-menu/div/nav[2]/ul/li[2]/div[1]"));
         action.moveToElement(mainMenu).perform();
-        subMenu = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[3]/div/div/embryo-menu/div/nav/ul/li[2]/div[2]/div[1]/ul/li[1]/div/div/ul/li[1]"));
-        action.moveToElement(subMenu).perform();
-        action.click().build().perform();
+
+        try {
+            subMenu = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[3]/div/div/embryo-menu/div/nav[2]/ul/li[2]/div[2]/div/ul/li[1]/div/div/ul/li[1]"));
+            action.moveToElement(subMenu).perform();
+            action.click().build().perform();
+        }catch (NoSuchElementException e){
+            System.out.println("no");
+        }
     }
 
-    public WebElement selectproduct()
-    {
-
-        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-hometwo/div/div/app-home-sections/div/div[5]/div[2]/div/div/div[2]/div/div/swiper/div[3]/div[3]/app-updated-product-card/mat-card/mat-card-content/div[4]/p"));
+    public WebElement select_category(){
+        return driver.findElement(By.xpath("//*[@id=\"app-nav-list-menu2\"]/li[2]"));
     }
 
-    public WebElement cartPageButton()
-    {
-        return driver.findElement(By.xpath("//*[@id=\"headerCart\"]/span[1]/mat-icon"));
+
+    public void selectproduct() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.navigate().to("https://shop.witheldokan.com/en/products/IMPEX-GLORIA-SMART-LED-TV-40-/47027?variant=47028");
+    }
+    public WebElement cartPageButton(){
+
+        return driver.findElement(By.xpath("//html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[3]/div[2]/embryo-headercart/button/span[1]/mat-icon"));
     }
 
-        public WebElement faverote(){
-                return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[4]/div/embryo-wishlist/button/span[1]/mat-icon"));
+        public WebElement faverote(){///
+                return driver.findElement(By.xpath("//html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[3]/div[2]/embryo-wishlist/button/span[1]/mat-icon"));
         }
         public WebElement compare(){
                 return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[4]/div/app-compare-list-menu/button/span[1]/mat-icon"));

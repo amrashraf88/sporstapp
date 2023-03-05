@@ -7,6 +7,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -20,7 +23,7 @@ public class SelectTagsSD {
     HomePage home = new HomePage(driver);
     CategoryPage category = new CategoryPage(driver);
     LoginPage login = new LoginPage(driver);
-
+    Actions action;
     @Given("user login")
     public void loginToWebsite()
     {
@@ -42,9 +45,13 @@ public class SelectTagsSD {
     }
 
     @And("user choose specific category")
-    public void selectCategory()
-    {
-        home.selectproduct().click();
+    public void selectCategory() throws InterruptedException {
+        home.select_category().click();
+        Thread.sleep(2000);
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"en\"]/app-root/div/mat-sidenav-container/mat-sidenav-content/app-softbar/div"));
+        Actions action=new Actions(driver);
+        action.moveToElement(element).perform();
+        action.click().build().perform();
     }
 
     @And("user select any tag")
@@ -56,7 +63,7 @@ public class SelectTagsSD {
     @Then("this tag page should be opened successfully")
     public void validateSuccessTag() throws InterruptedException {
         Thread.sleep(2000);
-        String expectedResult = "Products tagged with \'computer\'";
+        String expectedResult = "BREAD";
         String actualResult = category.getMessageOfTag().getText();
         Assert.assertTrue(actualResult.contains(expectedResult));
     }

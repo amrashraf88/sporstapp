@@ -9,6 +9,8 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 
+import java.io.FileNotFoundException;
+
 import static StepDefinitions.Hooks.driver;
 
 public class ForgotPasswordSD {
@@ -31,12 +33,11 @@ public class ForgotPasswordSD {
     }
 
     @And("user enter his email")
-    public void enterEmail()throws InterruptedException
-    {
+    public void enterEmail() throws InterruptedException, FileNotFoundException {
     	Thread.sleep(3000);
     	login.accept_cookie().click();
-    	 forget.emailAddress().click();
-        forget.emailAddress().sendKeys("amr.ashraf8850@gmail.com");
+    	 forget.emailAddress();
+
     }
 
     @And("user click recover")

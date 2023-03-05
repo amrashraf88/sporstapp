@@ -28,9 +28,8 @@ public class CompareStepDefinition {
     }
 
     @When("user select specific category")
-    public void selectCategory()
-    {
-        home.selectproduct().click();
+    public void selectCategory() throws InterruptedException {
+        home.selectproduct();
     }
 
     @And("user add product to compare list")

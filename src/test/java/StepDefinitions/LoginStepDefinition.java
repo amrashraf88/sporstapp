@@ -31,43 +31,27 @@ public class LoginStepDefinition {
 	LoginPage login = new LoginPage(driver);
 
 	String nphone;
+
 	@Given("user to login page")
 	public void openLoginPage() throws InterruptedException {
 
-		Thread.sleep(16000);
+		Thread.sleep(3000);
 		home.login().click();
-		
+
 	}
-	@And ("user accept cookies")
-    public void accept_cookie() throws InterruptedException {
+
+	@And("user accept cookies")
+	public void accept_cookie() throws InterruptedException {
 		Thread.sleep(3000);
 		login.accept_cookie().click();
 	}
-	
+
 	@When("user enter valid email")
 	public void enterEmail() throws IOException, InterruptedException {
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(1000));
-//		try {
-//			// Wait for up to 10 seconds for the element to be present and visible
-//			WebElement element = new WebDriverWait(driver, Duration.ofMillis(10))
-//					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/input")));
-//
-//			// If the element is present and visible, check if it's enabled and enter some text
-//			if (element.isEnabled()) {
-//				login.userName();
-//				//  inventory.storeSave().click();
-//			} else {
-//				System.out.println("Element is not enabled");
-//			}
-//		} catch (NoSuchElementException | TimeoutException e) {
-//			System.out.println("Element not found or timed out");
-//		}
-
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10));
 		WebElement element = null;
 		boolean elementFound = false;
-
-		while(!elementFound) {
+		while (!elementFound) {
 			try {
 				element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/input")));
 				elementFound = true;
@@ -75,7 +59,25 @@ public class LoginStepDefinition {
 				System.out.println("Element not found, retrying...");
 			}
 		}
-        login.userName();
+		login.userName();
+	}
+//		try {
+//			email = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/span[2]/label/span"));
+//			// do action with the element
+//			if (email.isDisplayed()) {
+//
+//				login.userName();
+//
+//			} else {
+//				login.phone_user();
+//			}
+//		} catch (NoSuchElementException e) {
+//			System.out.println("Element not found, retrying...");
+//			// element not found, do another action
+//		}
+//	}
+
+
 //		StringBuilder data = new StringBuilder();
 //		try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
 //			String line;s
@@ -90,7 +92,7 @@ public class LoginStepDefinition {
 //		System.out.println(dataString);
 //
 //		login.userName().sendKeys(dataString);
-	}
+
 
 	@And("user enter valid password")
 	public void enterPassword() {

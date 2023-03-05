@@ -14,7 +14,7 @@ public class WishlistPage {
 
     public WebElement getWishlistMessage()
     {
-        return driver.findElement(By.xpath("//*[@id=\"bar-notification\"]/div/p"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-favorites/div/div/div/div/div/div/div[2]/div/div[1]/a/h5"));
     }
 
 

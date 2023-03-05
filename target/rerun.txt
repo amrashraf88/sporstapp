@@ -1,10 +1,10 @@
 file:src/main/resources/Features/SC12_CreateOrder.feature:4
 file:src/main/resources/Features/SC01_Register.feature:4
 file:src/main/resources/Features/SC08_SelectTags.feature:4
-file:src/main/resources/Features/SC05_SwitchCurrencies.feature:4
 file:src/main/resources/Features/SC11_AddToCompare.feature:4
 file:src/main/resources/Features/SC07_Filteration.feature:4
 file:src/main/resources/Features/SC02_Login.feature:4
+file:src/main/resources/Features/SC13_Inventory.feature:4
 file:src/main/resources/Features/SC06_SelectCategory.feature:4
 file:src/main/resources/Features/SC04_Search.feature:4
 file:src/main/resources/Features/SC10_AddToWishlist.feature:4

@@ -32,6 +32,9 @@ public class checkoutpage {
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[1]/div/div/div/div[1]/div/mat-form-field[2]/div/div[1]/div/input"));
 
     }
+    public  WebElement email_guest(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[1]/div/div/div/div[1]/div/mat-form-field[3]/div/div[1]/div/input"));
+    }
     public WebElement phone_guest(){
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[1]/div/div/div/div[1]/div/mat-form-field[4]/div/div[1]/div/input"));
     }
@@ -51,8 +54,12 @@ public class checkoutpage {
         return driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/mat-dialog-container/app-add-address/div[2]/form/div/div[9]/button"));
     }
 
+    public WebElement store_adrress(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[2]/div/div/div/div[1]/div"));
+    }
+
     public WebElement continue_pyment(){
-        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[2]/div/div/div[3]/button"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[2]/div/div/div/div[2]/button"));
     }
     public WebElement choose_payment(){
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[1]/div/div/div/mat-radio-group/mat-radio-button[1]/label/span[2]"));
@@ -61,7 +68,7 @@ public class checkoutpage {
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[5]/mat-checkbox/label"));
     }
     public WebElement deleviry_time(){
-        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[3]/div[2]/mat-list/div[2]/mat-list-item/div/mat-radio-button/label/span[2]"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[3]/div/mat-card[1]/mat-card-content/span"));
     }
     public WebElement place_order(){
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[6]/button"));

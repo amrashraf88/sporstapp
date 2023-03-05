@@ -9,6 +9,7 @@ import org.junit.Assert;
 
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -24,43 +25,33 @@ public class WishlistSD {
 
 
     @Given("user logged in to add product to wishlist")
-    public void loggedUser() throws InterruptedException {
+    public void loggedUser() throws InterruptedException, FileNotFoundException {
+        Thread.sleep(3000);
         home.login().click();
-        Thread.sleep(2000);
-        StringBuilder data = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                data.append(line).append("\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String dataString = data.toString();
-        System.out.println(dataString);
-       // login.userName().click();
-      //  login.userName().sendKeys(dataString);
+        Thread.sleep(3000);
+        login.userName();
+        // login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");
         login.loginButton().click();
     }
 
     @When("user select any category")
-    public void selectCategory()
-    {
-        home.selectproduct().click();
+    public void selectCategory() throws InterruptedException {
+      home.selectproduct();
     }
 
     @And("user add product to wishlist")
-    public void addToWishlist()
-    {
+    public void addToWishlist() throws InterruptedException {
+        Thread.sleep(2000);
+
         category.addToWishlistButton().click();
     }
 
     @Then("product should add to wishlist successfully")
     public void productAddedToWishlist() throws InterruptedException {
+        home.faverote().click();
         Thread.sleep(2000);
-        String expectedResult = "The product has been added to your wishlist";
+        String expectedResult = " IMPEX GLORIA SMART LED TV 40 ";
         String actualResult = list.getWishlistMessage().getText();
         Assert.assertTrue(actualResult.contains(expectedResult));
     }

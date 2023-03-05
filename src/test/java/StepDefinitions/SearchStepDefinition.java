@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -23,7 +24,7 @@ public class SearchStepDefinition {
     SearchPage search = new SearchPage(driver);
 
     @Given("user login to his account")
-    public void loggedUser() throws InterruptedException {
+    public void loggedUser() throws InterruptedException, FileNotFoundException {
 
 
         Thread.sleep(3000);
@@ -39,7 +40,7 @@ public class SearchStepDefinition {
     public void searchOnProduct() throws InterruptedException {
         Thread.sleep(3000);
         home.searchBox().click();
-        home.searchBox().sendKeys("Arsenal T-shirt");
+        home.searchBox().sendKeys(" ");
     }
 
     @And("user click on search")

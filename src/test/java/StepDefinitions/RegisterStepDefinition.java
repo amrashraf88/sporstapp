@@ -100,22 +100,25 @@ public class RegisterStepDefinition {
     }
 
     @And("user enter email")
-    public void enterEmail()
-    {
-        String email = home.fask_email();
-        register.email().sendKeys(email);
-    }
-    public static String globalVariable;
-    public void clearTextFile(String filePath) {
+    public void enterEmail() throws IOException {
         try {
-            FileWriter fw = new FileWriter("/home/amr/Downloads/hotfix_final/fileName.txt");
+            FileWriter fw = new FileWriter("/home/amr/Downloads/hotfix_final/fileName2.txt");
             PrintWriter pw = new PrintWriter(fw);
             pw.print("");
             pw.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        String email = home.fask_email();
+        register.email().sendKeys(email);
+        File file = new File("fileName2.txt");
+        FileWriter fr = new FileWriter(file, true);
+        fr.write("");
+        fr.write(email);
+        fr.close();
     }
+    public static String globalVariable;
+
     
     @And("user enter phone")
     public String phone() throws IOException {

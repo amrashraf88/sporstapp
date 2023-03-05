@@ -15,7 +15,7 @@ public class CartPage {
 
     public WebElement getCartMessage()
     {
-        return driver.findElement(By.xpath("//*[@id=\"bar-notification\"]/div/p"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/embryo-cart/div/div/div/div[1]/div/div/div[2]/div/a/h5"));
     }
 
     public WebElement termsAndConditions()

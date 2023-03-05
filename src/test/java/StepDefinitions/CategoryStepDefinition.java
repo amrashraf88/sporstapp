@@ -11,6 +11,7 @@ import org.junit.Assert;
 
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -25,22 +26,28 @@ public class CategoryStepDefinition {
 
 
     @Given("user is logged in to filter")
-    public void loggedUser() throws InterruptedException {
+    public void loggedUser() throws InterruptedException, FileNotFoundException {
         home.login().click();
         Thread.sleep(3000);
         login.userName();
+        login.password().sendKeys("12345678");
+        login.loginButton().click();
     }
 
     @When("user select category")
-    public void selectCategory()
-    {
+    public void selectCategory() throws InterruptedException {
+        Thread.sleep(2000);
         home.hoverOnCategory();
     }
 
     @And("user filter by color")
-    public void filterByColor()
-    {
-        category.redColorFilter().click();
+    public void filterByColor() throws InterruptedException {
+        Thread.sleep(3000);
+        category.priceFilter().click();
+        category.priceFilter().sendKeys("10");
+        category.priceFilter_input().click();
+        category.priceFilter_input().sendKeys("1000");
+        category.apply_filter().click();
     }
 
     @Then("products with this attribute should be displayed")

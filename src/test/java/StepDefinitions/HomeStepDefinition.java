@@ -9,6 +9,7 @@ import org.junit.Assert;
 
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -23,9 +24,11 @@ public class HomeStepDefinition {
 
 
     @Given("user logged in to select category")
-    public void loggedUser() throws InterruptedException {
+    public void loggedUser() throws InterruptedException, FileNotFoundException {
         home.login().click();
         Thread.sleep(2000);
+        login.userName();
+
         StringBuilder data = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
             String line;
@@ -46,13 +49,13 @@ public class HomeStepDefinition {
 
     @And("user hover on category and select subcategory")
     public void selectCategory() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         home.hoverOnCategory();
     }
 
     @Then("the selected category should be displayed")
     public void checkSelectedCategory() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         boolean actualResult = category.categoryExist().isDisplayed();
         Assert.assertEquals(true, actualResult);
     }

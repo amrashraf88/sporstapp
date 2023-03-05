@@ -21,7 +21,7 @@ public class Hooks {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        driver.navigate().to("https://hotfix.el-dokan.com/en");
+        driver.navigate().to("https://shop.witheldokan.com");
         Thread.sleep(4000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(1000));
         try {
