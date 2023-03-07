@@ -24,7 +24,7 @@ import java.util.List;
 
 import static StepDefinitions.Hooks.driver;
 
-public class LoginStepDefinition {
+public class LoginStepDefinition  {
 
 	String phone = RegisterStepDefinition.globalVariable;
 	HomePage home = new HomePage(driver);
@@ -112,8 +112,10 @@ public void clickaccountbutton() throws InterruptedException {
 	public void successLogin() throws InterruptedException {
 		
 		Thread.sleep(2000);
-		
-		Assert.assertEquals("https://hotfix.el-dokan.com/en/account/profile", home.getURL());
+		String expectedResult = "Profile information";
+		String actualResult = home.profile_name().getText();
+		Assert.assertTrue(actualResult.contains(expectedResult));
+
 	}
 
 }

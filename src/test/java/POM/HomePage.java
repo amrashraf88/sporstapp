@@ -65,6 +65,9 @@ String nphone;
         String url = driver.getCurrentUrl();
         return url;
     }
+    public WebElement profile_name(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-account/div/div/div/div/div[2]/div[2]/div/app-profile/mat-card/h4"));
+    }
 
     public WebElement searchBox()
     {

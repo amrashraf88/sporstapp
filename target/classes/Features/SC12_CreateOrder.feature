@@ -10,7 +10,6 @@ Feature: Create successful order
     And user choose which way he went to checkout
     And user add data
     And user edit billing address
-    And user add address
     And user choose payment method
     And user check payment information
     And user agree terms and conditions
