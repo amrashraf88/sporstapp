@@ -20,22 +20,23 @@ public class LoginPage {
     {
         return driver.findElement(By.xpath("//*[@id=\"cookieNotice\"]/div[3]/div/div/button"));
     }
-
+    public WebElement user_name(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/input"));
+    }
     public WebElement password()
     {
-        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[2]/mat-form-field/div/div[1]/div[1]/input"));
+        return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[4]/input"));
     }
 
     public WebElement loginButton()
     {
-        return driver.findElement(By.xpath("//*[@id=\"en\"]/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/button"));
+        return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[6]/button"));
     }
 
     public WebElement forgotPassword()
     {
-        return driver.findElement(By.xpath("//*[@id=\"en\"]/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[3]/a"));
+        return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[5]/a"));
     }
-
 
 
 }

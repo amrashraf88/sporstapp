@@ -5,6 +5,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,8 +18,13 @@ public class Hooks {
 
     @Before
 	public void openBrowser() throws InterruptedException {
-      
-        driver = new ChromeDriver();
+
+        ChromeOptions options= new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
+
+
+        driver= new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.navigate().to("http://3.75.100.91/");

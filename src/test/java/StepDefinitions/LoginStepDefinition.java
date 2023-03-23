@@ -8,10 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.yaml.snakeyaml.scanner.Scanner;
@@ -19,6 +16,7 @@ import org.yaml.snakeyaml.scanner.Scanner;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.Key;
 import java.time.Duration;
 import java.util.List;
 
@@ -32,58 +30,41 @@ public class LoginStepDefinition  {
 
 	String nphone;
 
-	@Given("user to login page")
-	public void openLoginPage() throws InterruptedException {
-
-		Thread.sleep(3000);
-		home.login().click();
-
-	}
-
-	@And("user accept cookies")
-	public void accept_cookie() throws InterruptedException {
-		Thread.sleep(3000);
-		login.accept_cookie().click();
-	}
 
 	@When("user enter valid email")
 	public void enterEmail() throws IOException, InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10));
-		WebElement element = null;
-		boolean elementFound = false;
-		while (!elementFound) {
-			try {
-				element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/input")));
-				elementFound = true;
-			} catch (TimeoutException e) {
-				System.out.println("Element not found, retrying...");
-			}
-		}
-		login.userName();
+		Thread.sleep(3000);
+		login.user_name().clear();
+		login.user_name().clear();
+		login.user_name().sendKeys(Keys.DELETE);
+		Thread.sleep(2000);
+		login.user_name().sendKeys("");
 	}
 
 
 
 	@And("user enter valid password")
 	public void enterPassword() {
-		login.password().sendKeys("12345678");
+        login.password().click();
+		login.password().clear();
+		login.password().sendKeys("");
 	}
 
 	@And("user click on login")
 	public void clickLoginButton() {
 		login.loginButton().click();
 	}
-	@And ("user click on profile")
-public void clickaccountbutton() throws InterruptedException {
-		Thread.sleep(2000);
-	home.profile().click();
-} 
+//	@And ("user click on profile")
+//public void clickaccountbutton() throws InterruptedException {
+//		Thread.sleep(2000);
+//	home.profile().click();
+//}
 	@Then("user could login successfully and redirected to home page")
 	public void successLogin() throws InterruptedException {
-		
+
 		Thread.sleep(2000);
-		String expectedResult = "Profile information";
-		String actualResult = home.profile_name().getText();
+		String expectedResult = "http://3.75.100.91/dashboard";
+		String actualResult = home.getURL();
 		Assert.assertTrue(actualResult.contains(expectedResult));
 
 	}
