@@ -149,4 +149,25 @@ public class MemberPage {
     public WebElement MemberhealthHistory(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[7]/div/div[1]/input"));
     }
+    public WebElement Carriedmedications(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[7]/div/div[2]/input"));
+    }
+    public WebElement Allergies(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[7]/div/div[3]/input"));
+    }
+    public WebElement CreditCard(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[9]/div/div[1]/div/input"));
+    }
+    public WebElement Check(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[9]/div/div[1]/div/input"));
+    }
+    public WebElement Cash(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[9]/div/div[3]/div/input"));
+    }
+    public WebElement SubmitSaveMember(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[10]/buttonÏ"));
+    }
+    public WebElement Ismember(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[3]/div[2]/div/div/div/div"));
+    }
 }
