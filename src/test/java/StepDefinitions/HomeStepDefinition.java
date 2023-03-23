@@ -19,7 +19,7 @@ import static StepDefinitions.Hooks.driver;
 public class HomeStepDefinition {
 
     HomePage home = new HomePage(driver);
-    CategoryPage category = new CategoryPage(driver);
+
     LoginPage login = new LoginPage(driver);
 
 
@@ -28,19 +28,6 @@ public class HomeStepDefinition {
         home.login().click();
         Thread.sleep(2000);
         login.userName();
-
-        StringBuilder data = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                data.append(line).append("\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String dataString = data.toString();
-        System.out.println(dataString);
 
       //  login.userName().sendKeys(dataString);
         login.password().sendKeys("12345678");

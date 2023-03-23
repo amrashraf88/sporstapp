@@ -13,33 +13,40 @@ public class RegistrationPage {
 		this.driver = driver;
 	}
 
+	public WebElement ClubName(){
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[1]/div/input"));
+	}
+	public WebElement DominName(){
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[2]/div/input"));
+	}
 	public WebElement firstName() {
-		return driver.findElement(By.xpath("//*[@id=\"mat-input-3\"]"));
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[3]/div/input"));
 	}
 
 	public WebElement lastName() {
-		return driver.findElement(By.xpath("//*[@id=\"mat-input-4\"]"));
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[4]/div/input"));
 	}
 
 	public WebElement email() {
-		return driver.findElement(By.xpath("//*[@id=\"mat-input-5\"]"));
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[5]/div/input"));
 	}
 
 	public WebElement phone() {
-		return driver.findElement(By.xpath("//*[@id=\"mat-input-6\"]"));
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[6]/div/div/div[2]/input"));
 		
 	}
 
 	public WebElement password() {
-		return driver.findElement(By.xpath("//*[@id=\"mat-input-8\"]"));
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[7]/div/div[1]/div[1]/input"));
 	}
 
 	public WebElement confirmPassword() {
-		return driver.findElement(By.xpath("//*[@id=\"mat-input-9\"]"));
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/div[8]/div/input"));
 	}
 
+
 	public WebElement registerButton() {
-		return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/embryo-register/div/div/div/div/div/div[2]/mat-card/form/button"));
+		return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[5]/button"));
 	}
 
 }

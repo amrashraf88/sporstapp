@@ -61,37 +61,7 @@ public class LoginStepDefinition  {
 		}
 		login.userName();
 	}
-//		try {
-//			email = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/span[2]/label/span"));
-//			// do action with the element
-//			if (email.isDisplayed()) {
-//
-//				login.userName();
-//
-//			} else {
-//				login.phone_user();
-//			}
-//		} catch (NoSuchElementException e) {
-//			System.out.println("Element not found, retrying...");
-//			// element not found, do another action
-//		}
-//	}
 
-
-//		StringBuilder data = new StringBuilder();
-//		try (BufferedReader br = new BufferedReader(new FileReader("/home/amr/Downloads/hotfix_final/fileName.txt"))) {
-//			String line;s
-//			while ((line = br.readLine()) != null) {
-//				data.append(line).append("\n");
-//			}
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		String dataString = data.toString();
-//		System.out.println(dataString);
-//
-//		login.userName().sendKeys(dataString);
 
 
 	@And("user enter valid password")

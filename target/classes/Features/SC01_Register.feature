@@ -3,8 +3,9 @@ Feature: verify register functionality
 
   Scenario: User could register with valid data
     Given user navigate to registration page
-
-    When user enter first name
+  When user add club name
+    And user add club domin
+    And user enter first name
     And user enter last name
     And user enter email
     And user enter phone

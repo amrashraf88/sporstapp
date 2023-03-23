@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hotfix_final" />
+        <module name="sporstapp" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hotfix_final" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
