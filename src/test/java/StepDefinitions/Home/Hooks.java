@@ -1,4 +1,4 @@
-package StepDefinitions;
+package StepDefinitions.Home;
 
 import POM.*;
 import io.cucumber.java.After;
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
-    static WebDriver driver = null;
+   public static WebDriver driver = null;
 
     @Before
 	public void openBrowser() throws InterruptedException {

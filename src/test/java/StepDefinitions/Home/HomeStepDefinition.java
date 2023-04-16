@@ -1,19 +1,15 @@
-package StepDefinitions;
+package StepDefinitions.Home;
 
 import POM.*;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 
-import static StepDefinitions.Hooks.driver;
+import static StepDefinitions.Home.Hooks.driver;
 
 
 public class HomeStepDefinition {

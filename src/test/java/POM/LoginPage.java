@@ -38,5 +38,11 @@ public class LoginPage {
         return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[5]/a"));
     }
 
-
+    public WebElement tostor() {
+        try {
+            return driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[4]/div/div/div/div[1]"));
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }

@@ -40,7 +40,8 @@ String nphone;
     
     // fake phone genartion
     public String fask_phone() {
-    	 String phone1 = faker.phoneNumber().phoneNumber();
+
+        String phone1 = faker.numerify("##########");
     	 globalVariable = phone1;
     	 return phone1;
     	

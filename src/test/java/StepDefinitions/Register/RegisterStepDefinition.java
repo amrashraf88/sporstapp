@@ -1,4 +1,4 @@
-package StepDefinitions;
+package StepDefinitions.Register;
 
 import POM.HomePage;
 import POM.RegistrationPage;
@@ -13,7 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static StepDefinitions.Hooks.driver;
+import static StepDefinitions.Home.Hooks.driver;
 
 
 public class RegisterStepDefinition {
@@ -123,8 +123,6 @@ public void ClubDomain(){
     public void clickOnRegisterBtn() throws InterruptedException {Thread.sleep(5000);
         register.registerButton().click();
     }
-
-
 
 
 

@@ -1,10 +1,11 @@
-package StepDefinitions;
+package StepDefinitions.Member;
 
 import POM.HomePage;
 import POM.LoginPage;
 import POM.MemberPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
-import static StepDefinitions.Hooks.driver;
+import static StepDefinitions.Home.Hooks.driver;
 
 public class MemberStepDefinition {
 
@@ -40,6 +41,8 @@ public class MemberStepDefinition {
     @When("user add new member")
     public void AddNewMember() throws InterruptedException {
         Thread.sleep(1000);
+    //    member.MemberDetails().click();
+    //    member.EditMember().click();
         member.AddNewMember().click();
     }
     @And("user choose marketing")
@@ -66,14 +69,26 @@ public class MemberStepDefinition {
     }
 
     @And("user addning info")
-    public void info(){
+    public void info() throws InterruptedException {
         // Assume driver is a valid WebDriver instance
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0, 1000)"); // scrolls down the page by 500 pixels
-
         member.DOB().sendKeys("22032022");
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+         // scrolls down the page by 500 pixels
+        member.DOB().sendKeys("22032022");
+        try {
+            if (member.DOB().isDisplayed()) {
+                js.executeScript("window.scrollBy(0,500)");
+            }else {
+                System.out.println("error");
+            }
+        }catch (Exception e){
+            System.out.println("hi");
+        }
+
+
         Select select = new Select(member.Gender());
-        select.selectByVisibleText("Female");
+        select.selectByVisibleText("Male");
         member.Grade().click();
         member.Grade().sendKeys("10");
         member.School().click();
@@ -81,16 +96,70 @@ public class MemberStepDefinition {
     }
     @And("user add contact")
     public void contact() throws InterruptedException {
-        member.CellPhoneNumber().sendKeys("0102345634");
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,700)");
+        member.CellPhoneNumber().sendKeys(home.fask_phone());
         member.Email().sendKeys(home.fask_email());
         Select select = new Select(member.PreferredContactMethod());
         select.selectByVisibleText("Email");
-        member.Whatsapp().sendKeys("0102345678");
+        member.Whatsapp().sendKeys(home.fask_phone());
         member.FBMassenger().click();
         member.FBMassenger().sendKeys(home.fask_name());
         member.GoogleDue().click();
         member.GoogleDue().sendKeys(home.fask_name());
-        Thread.sleep(90000);
+
+    }
+    @And("user add his address")
+    public void AddressMember() throws InterruptedException {
+        Thread.sleep(1000);
+
+        Select state = new Select(member.State());
+        state.selectByVisibleText("New York");
+        member.City().click();
+        Select city = new Select(member.City());
+        city.selectByVisibleText("New York");
+        member.StreetAddress().click();
+        member.StreetAddress().sendKeys(home.fask_name());
+        member.ZipCode().click();
+        member.ZipCode().sendKeys("12345");
+
+    }
+    @And("user add his Health")
+    public void HealthMember() throws InterruptedException {
+        Thread.sleep(2000);
+        member.MemberhealthHistory().click();
+        member.MemberhealthHistory().sendKeys(home.fask_name());
+        member.Carriedmedications().click();
+        member.Carriedmedications().sendKeys(home.fask_name());
+        member.Allergies().click();
+        member.Allergies().sendKeys(home.fask_name());
+    }
+    @And("user add his activity")
+    public void activity() throws InterruptedException {
+        Thread.sleep(4000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Select select = new Select(member.Weapon());
+        select.selectByVisibleText("Epee");
+        Select select1 = new Select(member.Statues());
+        select1.selectByVisibleText("Inactive");
+
+    }
+    @And("user choose his payment")
+    public void paymentMethod(){
+        member.Cash().click();
+    }
+    @And("user save data of member")
+    public void SaveData(){
+        member.SaveButton().click();
     }
 
+    @Then("member added succesfully")
+    public void createsuccesfully() throws InterruptedException {
+        Thread.sleep(3000);
+        String Acualy = member.successfull().getText();
+        assert Acualy.equals("Member added successfully");
+
+    }
 }

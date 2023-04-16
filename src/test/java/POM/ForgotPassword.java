@@ -62,4 +62,7 @@ public class ForgotPassword {
     {
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/embryo-forgotpassword/div/div/div/div/div/div[2]/mat-card/div"));
     }
+    public WebElement emailforget(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/embryo-forgotpassword/div/div/div/div/div/div[2]/mat-card/form/div[1]/mat-form-field/div/div[1]/div/input"));
+    }
 }

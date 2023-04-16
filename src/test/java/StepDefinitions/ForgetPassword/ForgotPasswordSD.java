@@ -1,4 +1,4 @@
-package StepDefinitions;
+package StepDefinitions.ForgetPassword;
 
 import POM.ForgotPassword;
 import POM.HomePage;
@@ -11,7 +11,7 @@ import org.junit.Assert;
 
 import java.io.FileNotFoundException;
 
-import static StepDefinitions.Hooks.driver;
+import static StepDefinitions.Home.Hooks.driver;
 
 public class ForgotPasswordSD {
 
@@ -32,11 +32,11 @@ public class ForgotPasswordSD {
   
     }
 
-    @And("user enter his email")
-    public void enterEmail() throws InterruptedException, FileNotFoundException {
+    @And("user enter his email\"(.*)\"$")
+    public void enterEmail(String email) throws InterruptedException, FileNotFoundException {
     	Thread.sleep(3000);
     	login.accept_cookie().click();
-    	 forget.emailAddress();
+    	 forget.emailforget().sendKeys(email);
 
     }
 

@@ -26,6 +26,9 @@ public class MemberPage {
     public WebElement MemberDetails(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[4]/table/tbody/tr[1]"));
     }
+    public WebElement EditMember(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/a"));
+    }
     public WebElement searchMember(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div/div[1]/input"));
     }
@@ -138,10 +141,10 @@ public class MemberPage {
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[6]/div/div[1]/input"));
     }
     public WebElement City(){
-        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[6]/div/div[2]/input"));
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[6]/div/div[3]/select"));
     }
     public WebElement State(){
-        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[6]/div/div[3]/input"));
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[6]/div/div[2]/select"));
     }
     public WebElement ZipCode(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[6]/div/div[4]/input"));
@@ -168,6 +171,56 @@ public class MemberPage {
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[10]/buttonÏ"));
     }
     public WebElement Ismember(){
-        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[3]/div[2]/div/div/div/div"));
+        try {
+            return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[3]/div[2]/div/div/div/div"));
+        }catch (Exception e){
+            return null;
+        }
     }
+    public WebElement Weapon(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[1]/select"));
+    }
+    public WebElement Statues(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[2]/select"));
+    }
+    public WebElement package_id(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[3]/select"));
+    }
+    public WebElement SaveButton(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[10]/button"));
+    }
+    public WebElement successfull(){
+        return driver.findElement(By.xpath("/html/body/div[5]/div/div/div[1]/h2"));
+    }
+//======================================== element of validation message ===========================================================
+    public WebElement ValiadtionFirstName(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[2]/div/div[1]/div/span"));
+    }
+    public WebElement ValidationLastName(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[2]/div/div[2]/div"));
+    }
+
+    public WebElement ValidationAdultName(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[3]/div[1]/div[2]/div"));
+    }
+    public WebElement ValidationRelationship(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[3]/div[1]/div[3]/div"));
+    }
+    public WebElement ValidationDOB(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[4]/div/div[1]/div"));
+    }
+    public WebElement validationGrad(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[4]/div/div[3]/div"));
+    }
+    public WebElement ValidationSchool(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[4]/div/div[4]/div"));
+    }
+    public WebElement ValidationCellPhone(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[5]/div/div[1]/div[2]"));
+    }
+    public WebElement ValidationEmail(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[5]/div/div[2]/div"));
+    }
+
+
 }
