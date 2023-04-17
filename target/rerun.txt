@@ -1,0 +1,7 @@
+file:src/main/resources/Features/SC01_Register.feature:4
+file:src/main/resources/Features/SC04_AddMember.feature:4
+file:src/main/resources/Features/Login/SC02_Login.feature:12
+file:src/main/resources/Features/Login/SCO1_InvalidLogin.feature:13
+file:src/main/resources/Features/RestPassword/SC03_ResetPass.feature:13
+file:src/main/resources/Features/RestPassword/SC06_invalidRestPassword.feature:12
+file:src/main/resources/Features/SC05_EditMember.feature:4

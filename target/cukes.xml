@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="7" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="224.261">
+    <testcase classname="Verify login Functionality" name="User could log in with valid email and password" time="24.81">
+        <failure message="timeout: Timed out receiving message from renderer: 9.206&#10;  (Session info: chrome=111.0.5563.146)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [139abf7ba5a80bfa20f17683acb45031, get {url=http://3.75.100.91/}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56431}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56431/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 139abf7ba5a80bfa20f17683acb45031" type="org.openqa.selenium.TimeoutException"><![CDATA[When user enter valid email"mohamed.osama_94@yahoo.com".....................skipped
+And user enter valid password"12345678".....................................skipped
+And user click on login.....................................................skipped
+Then user could login successfully and redirected to home page..............skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 9.206
+  (Session info: chrome=111.0.5563.146)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [139abf7ba5a80bfa20f17683acb45031, get {url=http://3.75.100.91/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56431}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56431/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 139abf7ba5a80bfa20f17683acb45031
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:296)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:975)
+	at StepDefinitions.Home.Hooks.openBrowser(Hooks.java:30)
+]]></failure>
+    </testcase>
+    <testcase classname="Verify Invalidlogin Functionality" name="User couldn't log in without valid  password" time="17.348">
+        <failure message="timeout: Timed out receiving message from renderer: 9.688&#10;  (Session info: chrome=111.0.5563.146)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d5fbf3dd249d75c4e97d5b92118b41cf, get {url=http://3.75.100.91/}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56529}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56529/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d5fbf3dd249d75c4e97d5b92118b41cf" type="org.openqa.selenium.TimeoutException"><![CDATA[When user enter Invalid user"mohamed.osama_94@yahoo.com"....................skipped
+And user enter Invalid password"Test@123"...................................skipped
+And user Invalid click on login.............................................skipped
+Then user cannot login......................................................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 9.688
+  (Session info: chrome=111.0.5563.146)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5fbf3dd249d75c4e97d5b92118b41cf, get {url=http://3.75.100.91/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56529}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56529/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d5fbf3dd249d75c4e97d5b92118b41cf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:296)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:975)
+	at StepDefinitions.Home.Hooks.openBrowser(Hooks.java:30)
+]]></failure>
+    </testcase>
+    <testcase classname="Verify Invalidlogin Functionality" name="User couldn't log in without valid email" time="17.512">
+        <system-out><![CDATA[When user enter Invalid user"rahul@gmail.com"...............................passed
+And user enter Invalid password"12345678"...................................passed
+And user Invalid click on login.............................................passed
+Then user cannot login......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify Invalidlogin Functionality" name="User couldn't log in without valid email and password" time="17.505">
+        <system-out><![CDATA[When user enter Invalid user"rahul@gmail.com"...............................passed
+And user enter Invalid password"rahul@gmail.com"............................passed
+And user Invalid click on login.............................................passed
+Then user cannot login......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="verify reset password functionality" name="User could reset his/her password successfully" time="18.883">
+        <failure message="timeout: Timed out receiving message from renderer: 9.481&#10;  (Session info: chrome=111.0.5563.146)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [3ef4d3fdb6a522e1b64e290f0cc57d3e, get {url=http://3.75.100.91/}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56794}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56794/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 3ef4d3fdb6a522e1b64e290f0cc57d3e" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user opened login page................................................skipped
+And user click on reset password............................................skipped
+And user enter his email"mohamed.osama_94@yahoo.com"........................skipped
+And user click recover......................................................skipped
+Then user should receive a link to reset password...........................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 9.481
+  (Session info: chrome=111.0.5563.146)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3ef4d3fdb6a522e1b64e290f0cc57d3e, get {url=http://3.75.100.91/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56794}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56794/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ef4d3fdb6a522e1b64e290f0cc57d3e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:296)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:975)
+	at StepDefinitions.Home.Hooks.openBrowser(Hooks.java:30)
+]]></failure>
+    </testcase>
+    <testcase classname="verify reset password functionality" name="User could reset his/her password successfully" time="12.726">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#kt_sign_in_submit&quot;}&#10;  (Session info: chrome=111.0.5563.146)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b7bd12957cc46761b8665cb2bf2acbb1, findElement {using=id, value=kt_sign_in_submit}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56891}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56891/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b7bd12957cc46761b8665cb2bf2acbb1" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user opened login page................................................failed
+And user click on reset password............................................skipped
+And user enter his email"mohamed.osama_94@yahoo.com"........................skipped
+And user click recover......................................................skipped
+Then user should receive a link to reset password...........................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#kt_sign_in_submit"}
+  (Session info: chrome=111.0.5563.146)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b7bd12957cc46761b8665cb2bf2acbb1, findElement {using=id, value=kt_sign_in_submit}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56891}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56891/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b7bd12957cc46761b8665cb2bf2acbb1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at POM.HomePage.login(HomePage.java:58)
+	at StepDefinitions.ForgetPassword.ForgotPasswordSD.openLoginPage(ForgotPasswordSD.java:24)
+	at ✽.user opened login page(file:///Users/amrashraf/IdeaProjects/sporstapp/src/main/resources/Features/RestPassword/SC06_invalidRestPassword.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="verify register functionality" name="User could register with valid data" time="26.936">
+        <failure message="element click intercepted: Element &lt;button type=&quot;submit&quot; id=&quot;kt_sign_up_submit&quot; class=&quot;btn btn-lg btn_main w-100 mb-5&quot; disabled=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (840, 844). Other element would receive the click: &lt;div class=&quot;text-center&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=111.0.5563.146)&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [3cde5f35f5df38d84a26d85a5eefc555, clickElement {id=4f411b48-be1a-421d-8681-3d2f714018b6}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56963/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on MAC (3cde5f35f5df38d84a26d85a5eefc555)] -&gt; xpath: /html/body/div[1]/div/div/div/div/form/div[5]/button]&#10;Session ID: 3cde5f35f5df38d84a26d85a5eefc555" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given user navigate to registration page....................................passed
+When user add club name.....................................................passed
+And user add club domin.....................................................passed
+And user enter first name...................................................passed
+And user enter last name....................................................passed
+And user enter email........................................................passed
+And user enter phone........................................................passed
+And user enter password.....................................................passed
+And user confirm password...................................................passed
+Then user could register successfully.......................................failed
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" id="kt_sign_up_submit" class="btn btn-lg btn_main w-100 mb-5" disabled="">...</button> is not clickable at point (840, 844). Other element would receive the click: <div class="text-center">...</div>
+  (Session info: chrome=111.0.5563.146)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3cde5f35f5df38d84a26d85a5eefc555, clickElement {id=4f411b48-be1a-421d-8681-3d2f714018b6}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:56963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:56963/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (3cde5f35f5df38d84a26d85a5eefc555)] -> xpath: /html/body/div[1]/div/div/div/div/form/div[5]/button]
+Session ID: 3cde5f35f5df38d84a26d85a5eefc555
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at StepDefinitions.Register.RegisterStepDefinition.clickOnRegisterBtn(RegisterStepDefinition.java:124)
+	at ✽.user could register successfully(file:///Users/amrashraf/IdeaProjects/sporstapp/src/main/resources/Features/SC01_Register.feature:14)
+]]></failure>
+    </testcase>
+    <testcase classname="verify adding new member functionality" name="User could add new member successfully" time="44.3">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[3]/select&quot;}&#10;  (Session info: chrome=111.0.5563.146)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d9b60cc179bdff52fd0d545a9034a491, findElement {using=xpath, value=/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[3]/select}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:57092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:57092/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d9b60cc179bdff52fd0d545a9034a491" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user login to dashboard...............................................passed
+Given user navigate to member page..........................................passed
+When user add new member....................................................passed
+And user choose marketing...................................................passed
+And user entering name......................................................passed
+And user adding membership..................................................passed
+And user addning info.......................................................passed
+And user add contact........................................................passed
+And user add his address....................................................passed
+And user add his Health.....................................................passed
+And user add his activity...................................................failed
+And user choose his payment.................................................skipped
+And user save data of member................................................skipped
+Then member added succesfully...............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[3]/select"}
+  (Session info: chrome=111.0.5563.146)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d9b60cc179bdff52fd0d545a9034a491, findElement {using=xpath, value=/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[3]/select}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/0t/3x2gzg1s1hg...}, goog:chromeOptions: {debuggerAddress: localhost:57092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:57092/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d9b60cc179bdff52fd0d545a9034a491
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at POM.MemberPage.package_id(MemberPage.java:187)
+	at StepDefinitions.Member.MemberStepDefinition.activity(MemberStepDefinition.java:147)
+	at ✽.user add his activity(file:///Users/amrashraf/IdeaProjects/sporstapp/src/main/resources/Features/SC04_AddMember.feature:15)
+]]></failure>
+    </testcase>
+    <testcase classname="verify adding new member functionality" name="User could add new member successfully" time="44.079">
+        <failure message="Cannot locate option with text: Epee&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user login to Edit member to  dashboard...............................passed
+Given user navigate to edit member..........................................passed
+When user Edit new member...................................................passed
+And user Edit marketing.....................................................passed
+And user Edit name..........................................................passed
+And user Edit membership....................................................passed
+And user Edit info..........................................................passed
+And user Edit contact.......................................................passed
+And user Edit his address...................................................passed
+And user Edit his Health....................................................passed
+And user Edit his activity..................................................failed
+And user Edit his payment...................................................skipped
+Then user save data of Editmember...........................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Epee
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.5', java.version: '17.0.6'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
+	at StepDefinitions.Member.EditMemberStepDefinition.Editactivity(EditMemberStepDefinition.java:142)
+	at ✽.user Edit his activity(file:///Users/amrashraf/IdeaProjects/sporstapp/src/main/resources/Features/SC05_EditMember.feature:15)
+]]></failure>
+    </testcase>
+</testsuite>
