@@ -1,4 +1,4 @@
-package POM;
+package POM.Dashbord;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -69,7 +69,9 @@ String nphone;
     public WebElement profile_name(){
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-account/div/div/div/div/div[2]/div[2]/div/app-profile/mat-card/h4"));
     }
-
+public WebElement sidemenu(){
+        return driver.findElement(By.xpath("//*[@id=\"kt_app_sidebar\"]/div[2]"));
+}
     public WebElement searchBox()
     {
         return driver.findElement(By.xpath("//*[@id=\"searchBar\"]"));

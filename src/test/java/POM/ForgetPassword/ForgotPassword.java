@@ -1,4 +1,4 @@
-package POM;
+package POM.ForgetPassword;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,8 +1,7 @@
 package StepDefinitions.Login;
 
-import POM.HomePage;
-import POM.LoginPage;
-import StepDefinitions.Register.RegisterStepDefinition;
+import POM.Dashbord.HomePage;
+import POM.Login.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

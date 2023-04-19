@@ -1,7 +1,7 @@
 package StepDefinitions.Register;
 
-import POM.HomePage;
-import POM.RegistrationPage;
+import POM.Dashbord.HomePage;
+import POM.Register.RegistrationPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

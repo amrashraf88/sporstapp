@@ -1,8 +1,8 @@
 package StepDefinitions.Member;
 
-import POM.HomePage;
-import POM.LoginPage;
-import POM.MemberPage;
+import POM.Dashbord.HomePage;
+import POM.Login.LoginPage;
+import POM.Member.MemberPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -100,6 +100,7 @@ public class EditMemberStepDefinition {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)");
         member.CellPhoneNumber().sendKeys("0102345634");
+        member.Email().sendKeys(Keys.chord(Keys.END, Keys.SHIFT, Keys.HOME), Keys.DELETE);
         member.Email().sendKeys(home.fask_email());
         Select select = new Select(member.PreferredContactMethod());
         select.selectByVisibleText("Email");
@@ -138,10 +139,10 @@ public class EditMemberStepDefinition {
         Thread.sleep(4000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
-        Select select = new Select(member.Weapon());
+        Select select = new Select(member.editweapon());
         select.selectByVisibleText("Epee");
-        Select select1 = new Select(member.Statues());
-        select1.selectByVisibleText("Inactive");
+        Select select1 = new Select(member.editstatues());
+        select1.selectByVisibleText("Pending");
     }
     @And("user Edit his payment")
     public void EditpaymentMethod(){

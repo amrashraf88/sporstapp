@@ -1,4 +1,4 @@
-package POM;
+package POM.PromoCode;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -56,6 +56,9 @@ public class PromoCodePage {
     public WebElement RestButton(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[7]/div/button"));
     }
+public WebElement PromoPage(){
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[1]/div[2]/div/div/div[14]/a"));
+}
 
 
 }

@@ -1,8 +1,9 @@
-package StepDefinitions.Member;
+package StepDefinitions.PromoCode;
 
 import POM.Dashbord.HomePage;
 import POM.Login.LoginPage;
 import POM.Member.MemberPage;
+import POM.PromoCode.PromoCodePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,57 +16,43 @@ import java.io.IOException;
 
 import static StepDefinitions.Home.Hooks.driver;
 
-public class MemberStepDefinition {
+public class PromoCodeStepDefinition {
 
     HomePage home = new HomePage(driver);
     LoginPage login = new LoginPage(driver);
     MemberPage member = new MemberPage(driver);
+    PromoCodePage promo = new PromoCodePage(driver);
     @Given("user login to dashboard")
-    public void login_for_member() throws InterruptedException {
-        Thread.sleep(2000);
-        login.user_name().clear();
-        login.user_name().clear();
-        login.user_name().sendKeys(Keys.DELETE);
-        Thread.sleep(2000);
-        login.user_name().sendKeys("");
-        login.password().click();
-        login.password().clear();
-        login.password().sendKeys("");
-        login.loginButton().click();
+    public void login_for_promo(String username) throws InterruptedException {
+        Thread.sleep(1000);
+        login.user_name().click();
+        login.user_name().sendKeys(Keys.chord(Keys.END, Keys.SHIFT, Keys.HOME), Keys.DELETE);
+
+        login.user_name().sendKeys(username);
     }
     @Given("user navigate to member page")
-    public void memberpage() throws IOException, InterruptedException {
-        Thread.sleep(3000);
-        member.MemberPag().click();
-    }
-    @When("user add new member")
-    public void AddNewMember() throws InterruptedException {
-        Thread.sleep(1000);
-    //    member.MemberDetails().click();
-    //    member.EditMember().click();
-        member.AddNewMember().click();
-    }
-    @And("user choose marketing")
-    public void marketing(){
-        member.FacebookAds().click();
-    }
-    @And("user entering name")
-    public void FullName(){
-        member.FirstName().click();
-        member.FirstName().sendKeys(home.fask_name());
-        member.LastName().click();
-        member.LastName().sendKeys(home.fask_name());
-    }
-    @And("user adding membership")
-    public void Membership(){
-        Select select = new Select(member.MemberShipType());
-        select.selectByVisibleText("Recurring");
-        member.AdultName().click();
-        member.AdultName().sendKeys("test");
+    public void promopage() throws IOException, InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", home.sidemenu());
 
-        Select select1 = new Select(member.RealationShip());
-        select1.selectByVisibleText("Mother");
-        member.Ismember().click();
+        Thread.sleep(3000);
+        promo.PromoPage().click();
+    }
+    @When("user add new promo")
+    public void AddNewpromo() throws InterruptedException {
+        Thread.sleep(1000);
+
+       promo.AddNewPromocod().click();
+    }
+
+    @And("user enter promo name")
+    public void promoName(){
+    promo.PromoCodeName().click();
+    promo.PromoCodeName().sendKeys(home.fask_name());
+    }
+    @And("user adding PromoType")
+    public void PromoType(){
+        Select select = new Select(promo.promocodeType());
+        select.selectByVisibleText("percentage");
     }
 
     @And("user addning info")
@@ -146,10 +133,10 @@ public class MemberStepDefinition {
         select1.selectByVisibleText("Inactive");
 
     }
-    @And("user choose his payment")
-    public void paymentMethod(){
-        member.Cash().click();
-    }
+//    @And("user choose his payment")
+//    public void paymentMethod(){
+//        member.Cash().click();
+//    }
     @And("user save data of member")
     public void SaveData(){
         member.SaveButton().click();

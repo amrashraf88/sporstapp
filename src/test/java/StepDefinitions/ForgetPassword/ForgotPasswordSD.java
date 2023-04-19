@@ -1,8 +1,8 @@
 package StepDefinitions.ForgetPassword;
 
-import POM.ForgotPassword;
-import POM.HomePage;
-import POM.LoginPage;
+import POM.ForgetPassword.ForgotPassword;
+import POM.Dashbord.HomePage;
+import POM.Login.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
