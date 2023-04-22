@@ -5,6 +5,10 @@ import POM.Login.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 
 import java.io.FileNotFoundException;
@@ -42,5 +46,7 @@ public class HomeStepDefinition {
        // boolean actualResult = category.categoryExist().isDisplayed();
        // Assert.assertEquals(true, actualResult);
     }
+
+
 
 }

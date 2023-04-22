@@ -1,6 +1,6 @@
 package StepDefinitions.Home;
 
-import POM.*;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.*;
@@ -20,6 +20,7 @@ public class Hooks {
 	public void openBrowser() throws InterruptedException {
 
         ChromeOptions options= new ChromeOptions();
+
         options.addArguments("--remote-allow-origins=*");
 
 
@@ -27,8 +28,10 @@ public class Hooks {
         driver= new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);
         driver.navigate().to("http://3.75.100.91/");
-//        Thread.sleep(3000);
+        Thread.sleep(3000);
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(1000));
 //        try {
 //            // Wait for up to 10 seconds for the element to be present and visible
@@ -56,16 +59,16 @@ public class Hooks {
    }
     
 
-    @After
-    public static void closeBrowser()
-    {
-        try{
-            Thread.sleep(2000);
-            driver.quit();
-        }catch (NullPointerException e) {
-            System.out.println("NullPointerException Thrown!");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+//    @After
+//    public static void closeBrowser()
+//    {
+//        try{
+//            Thread.sleep(2000);
+//            driver.quit();
+//        }catch (NullPointerException e) {
+//            System.out.println("NullPointerException Thrown!");
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

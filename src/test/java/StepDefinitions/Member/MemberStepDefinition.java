@@ -7,11 +7,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Set;
 
 import static StepDefinitions.Home.Hooks.driver;
 
@@ -36,6 +40,7 @@ public class MemberStepDefinition {
     @Given("user navigate to member page")
     public void memberpage() throws IOException, InterruptedException {
         Thread.sleep(3000);
+
         member.MemberPag().click();
     }
     @When("user add new member")
