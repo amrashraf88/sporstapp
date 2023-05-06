@@ -62,7 +62,10 @@ public class MemberStepDefinition {
         member.LastName().sendKeys(home.fask_name());
     }
     @And("user adding membership")
-    public void Membership(){
+    public void Membership() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,700)");
+        Thread.sleep(1000);
         Select select = new Select(member.MemberShipType());
         select.selectByVisibleText("Recurring");
         member.AdultName().click();
@@ -103,7 +106,7 @@ public class MemberStepDefinition {
     public void contact() throws InterruptedException {
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,700)");
+        js.executeScript("window.scrollBy(0,500)");
         member.CellPhoneNumber().sendKeys(home.fask_phone());
         member.Email().sendKeys(home.fask_email());
         Select select = new Select(member.PreferredContactMethod());

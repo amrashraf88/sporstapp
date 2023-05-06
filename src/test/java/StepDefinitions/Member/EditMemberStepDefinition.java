@@ -57,7 +57,12 @@ public class EditMemberStepDefinition {
         member.LastName().sendKeys(home.fask_name());
     }
     @And("user Edit membership")
-    public void EditMembership(){
+    public void EditMembership() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,700)");
+        Thread.sleep(1000);
+        member.MemberShipType().click();
+
         Select select = new Select(member.MemberShipType());
         select.selectByVisibleText("Recurring");
         member.AdultName().click();
@@ -71,6 +76,7 @@ public class EditMemberStepDefinition {
     @And("user Edit info")
     public void Editinfo() throws InterruptedException {
         // Assume driver is a valid WebDriver instance
+
         member.DOB().sendKeys("22032022");
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -85,8 +91,6 @@ public class EditMemberStepDefinition {
         }catch (Exception e){
             System.out.println("hi");
         }
-
-
         Select select = new Select(member.Gender());
         select.selectByVisibleText("M");
         member.Grade().click();
@@ -98,7 +102,7 @@ public class EditMemberStepDefinition {
     public void Editcontact() throws InterruptedException {
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,700)");
+        js.executeScript("window.scrollBy(0,600)");
         member.CellPhoneNumber().sendKeys("0102345634");
         member.Email().sendKeys(Keys.chord(Keys.END, Keys.SHIFT, Keys.HOME), Keys.DELETE);
         member.Email().sendKeys(home.fask_email());
@@ -120,6 +124,8 @@ public class EditMemberStepDefinition {
         member.State().sendKeys(home.fask_name());
         member.StreetAddress().click();
         member.StreetAddress().sendKeys(home.fask_name());
+        member.State().sendKeys("New York");
+        member.City().sendKeys("New York");
         member.ZipCode().click();
         member.ZipCode().sendKeys("12345");
 

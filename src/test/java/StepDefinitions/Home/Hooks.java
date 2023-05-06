@@ -59,16 +59,16 @@ public class Hooks {
    }
     
 
-//    @After
-//    public static void closeBrowser()
-//    {
-//        try{
-//            Thread.sleep(2000);
-//            driver.quit();
-//        }catch (NullPointerException e) {
-//            System.out.println("NullPointerException Thrown!");
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @After
+    public static void closeBrowser()
+    {
+        try{
+            Thread.sleep(2000);
+            driver.quit();
+        }catch (NullPointerException e) {
+            System.out.println("NullPointerException Thrown!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
