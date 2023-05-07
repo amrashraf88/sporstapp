@@ -6,10 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
 import static StepDefinitions.Home.Hooks.driver;
@@ -104,6 +101,61 @@ public class AddStaffPageSteps {
     public void iSelectThePreferredContactMethod(String preferredContactMethod) {
         Select selectPreferredContactMethod = new Select(addStaffPage.Preferredcontactmethod());
         selectPreferredContactMethod.selectByVisibleText(preferredContactMethod);
+    }
+    @And("I enter Street address {string}")
+    public void iEnterStreetAddress(String StreetAddress) {
+       addStaffPage.StreetAddress().sendKeys(StreetAddress);
+
+    }
+    @And("I select state {string}")
+    public void iSelectState(String state) {
+        addStaffPage.State().sendKeys(state);
+
+    }
+    @And("I select city {string}")
+    public void iSelectcity(String city) {
+        addStaffPage.City().sendKeys(city);
+
+    }
+    @And("I enter ZipCode {string}")
+    public void iEnterZipCode(String ZipCode) {
+        addStaffPage.ZipCode().sendKeys(ZipCode);
+    }
+
+    @And("I enter Monday work hours")
+    public void iEnterMondayWorkHours() {
+        try {
+            WebElement mondayStart = addStaffPage.MondayStart();
+            WebElement mondayEnd = addStaffPage.MondayEndtime();
+            mondayStart.sendKeys("10:00");
+            mondayEnd.sendKeys("18:00");
+        } catch (NoSuchElementException e) {
+            // Handle case where the elements are not present on the page
+            throw new RuntimeException("Monday start or end time element not found", e);
+        } catch (Exception e) {
+            // Handle any other exceptions that may occur during the sendKeys() method
+            throw new RuntimeException("Error entering Monday work hours", e);
+        }
+    }
+    @And("I enter Coaches' health history {string}")
+    public void iEnterCoashHealh(String CoashHealh) {
+        addStaffPage.Coaches_health_history().sendKeys(CoashHealh);
+    }
+    @And("I enter Allergies {string}")
+    public void iEnterCAllergies(String Allergies) {
+        addStaffPage.Allergies().sendKeys(Allergies);
+    }
+    @And("I enter Carried medications {string}")
+    public void iEnterCarriedmedications(String Carriedmedications) {
+        addStaffPage.Carried().sendKeys(Carriedmedications);
+    }
+    @And("I enter Employment status {string}")
+    public void iEnterEmploymentstatus(String Employmentstatus) {
+        addStaffPage.EmployStatues().sendKeys(Employmentstatus);
+    }
+    @And("I Choose payment")
+    public void ichoosePayment() {
+        addStaffPage.PaymentMethod().click();
     }
 
     @And("I click on the Add Staff button")
