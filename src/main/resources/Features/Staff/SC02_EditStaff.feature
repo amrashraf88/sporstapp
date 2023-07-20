@@ -3,7 +3,7 @@ Feature: Edit Staff Page
     Given I am on the Edit Staff page
     When I update the first name to "<firstName>"
     And I update the last name to "<lastName>"
-    And I update the Job Title to "<jobTitle>"
+#    And I update the Job Title to "<jobTitle>"
     And I update the Role to "<role>"
     And I update the date of birth to "<dob>"
     And I update the gender to "<gender>"

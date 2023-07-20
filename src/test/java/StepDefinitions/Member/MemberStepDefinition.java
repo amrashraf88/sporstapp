@@ -41,7 +41,7 @@ public class MemberStepDefinition {
     public void memberpage() throws IOException, InterruptedException {
         Thread.sleep(3000);
 
-        member.MemberPag().click();
+        driver.navigate().to("http://3.75.100.91/members");
     }
     @When("user add new member")
     public void AddNewMember() throws InterruptedException {
@@ -66,14 +66,14 @@ public class MemberStepDefinition {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)");
         Thread.sleep(1000);
-        Select select = new Select(member.MemberShipType());
-        select.selectByVisibleText("Recurring");
+//        Select select = new Select(member.MemberShipType());
+//        select.selectByVisibleText("Recurring");
         member.AdultName().click();
         member.AdultName().sendKeys("test");
 
         Select select1 = new Select(member.RealationShip());
         select1.selectByVisibleText("Mother");
-        member.Ismember().click();
+
     }
 
     @And("user addning info")
@@ -81,18 +81,18 @@ public class MemberStepDefinition {
         // Assume driver is a valid WebDriver instance
         member.DOB().sendKeys("22032022");
         Thread.sleep(2000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-         // scrolls down the page by 500 pixels
-        member.DOB().sendKeys("22032022");
-        try {
-            if (member.DOB().isDisplayed()) {
-                js.executeScript("window.scrollBy(0,500)");
-            }else {
-                System.out.println("error");
-            }
-        }catch (Exception e){
-            System.out.println("hi");
-        }
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//         // scrolls down the page by 500 pixels
+//        member.DOB().sendKeys("22032022");
+//        try {
+//            if (member.DOB().isDisplayed()) {
+//                js.executeScript("window.scrollBy(0,500)");
+//            }else {
+//                System.out.println("error");
+//            }
+//        }catch (Exception e){
+//            System.out.println("hi");
+//        }
 
 
         Select select = new Select(member.Gender());

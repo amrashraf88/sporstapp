@@ -36,7 +36,7 @@ public class EditMemberStepDefinition {
     @Given("user navigate to edit member")
     public void editmemberpage() throws IOException, InterruptedException {
         Thread.sleep(3000);
-        member.MemberPag().click();
+        driver.navigate().to("http://3.75.100.91/members");
     }
     @When("user Edit new member")
     public void EditNewMember() throws InterruptedException {

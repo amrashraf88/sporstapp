@@ -193,7 +193,7 @@ public class MemberPage {
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[8]/div/div[3]/select"));
     }
     public WebElement SaveButton(){
-        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[10]/button"));
+        return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[9]/button[1]"));
     }
     public WebElement successfull(){
         return driver.findElement(By.xpath("/html/body/div[5]/div/div/div[1]/h2"));

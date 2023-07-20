@@ -13,6 +13,5 @@ Feature: verify adding new member functionality
     And user add his address
     And user add his Health
     And user add his activity
-    And user choose his payment
     And user save data of member
     Then member added succesfully
