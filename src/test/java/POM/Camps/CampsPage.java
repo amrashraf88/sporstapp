@@ -10,20 +10,14 @@ import java.util.Scanner;
 
 public class CampsPage {
     WebDriver driver = null;
-
     public CampsPage(WebDriver driver)
     {
         this.driver = driver;
     }
-
-
-    public WebElement CampsPage()
-    {
+    public WebElement CampsPage() {
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[1]/div[2]/div/div/div[7]"));
     }
-
-    public WebElement AddNewCamps()
-    {
+    public WebElement AddNewCamps() {
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[4]/div[1]/div[2]/a"));
     }
     public WebElement CampsName(){
@@ -38,18 +32,15 @@ public class CampsPage {
     public WebElement  Weapon(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[2]/div[2]/select"));
     }
-
     public WebElement CampDescription(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[6]/div/textarea"));
     }
-
     public WebElement CampStartDate(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[7]/div[1]/div[1]/input"));
     }
     public WebElement CampEndDate(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[7]/div[1]/div[2]/input"));
     }
-
     public WebElement CampMinMember(){
         return driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/form/div[3]/div[1]/input"));
     }
